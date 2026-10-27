@@ -1,0 +1,474 @@
+/*
+ * Belksiri Scan — the public pages.
+ *
+ * The same stylesheet as Belksiri's MarkDown One pages (mboti.github.io/
+ * markdown-one), with Belksiri Scan's own accent: `--accent` is `AppTheme.seed`
+ * (#2E7DF6). No framework, no font file, no script: opening a page contacts
+ * nobody but the host it was asked for. Added at the end: the language menu
+ * (a <details>, so it works without JavaScript) and right-to-left Arabic.
+ */
+
+:root {
+  color-scheme: light dark;
+
+  /* Belksiri Scan's accent: AppTheme.seed, lightened for the dark scheme. */
+  --ink: #12151b;
+  --paper: #ffffff;
+  --surface: #f7f8fa;
+  --muted: #5a6270;
+  --rule: #e4e7ec;
+  --accent: #2e7df6;
+  --accent-ink: #1a5fd0;
+  --on-accent: #ffffff;
+
+  /* The shell and the reading measure are two different widths on purpose: a
+     grid of cards wants room, a paragraph of policy wants about 70
+     characters. */
+  --page: 64rem;
+  --measure: 38rem;
+
+  --radius: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e8eaee;
+    --paper: #0f1115;
+    --surface: #171a20;
+    --muted: #99a1af;
+    --rule: #262a32;
+    --accent: #5b9bff;
+    --accent-ink: #8ab4ff;
+    --on-accent: #0f1115;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+/* An in-page jump is the only motion on this site, and some readers get
+   motion sick from it. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+}
+
+/* The centred gutter. Everything on every page sits in one of these. */
+.wrap {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* The two reading pages are `<main class="wrap">`, and a policy read at
+   64rem is a policy nobody finishes. The landing page opts out by not being
+   a `.wrap` itself: its sections carry their own. */
+main.wrap { max-width: var(--measure); }
+
+/* A block of prose inside a wide section. */
+.prose { max-width: var(--measure); }
+
+/* Reachable by keyboard, invisible until it is focused — which is the point:
+   the first Tab on any page skips the navigation. */
+.skip {
+  position: absolute;
+  /* Moved up out of view rather than 9999px to the left: in Arabic, which
+     reads right to left, a far-left box widens the page instead of hiding. */
+  inset-inline-start: 0;
+  transform: translateY(-120%);
+  top: 0;
+  background: var(--accent);
+  color: var(--on-accent);
+  padding: 0.6rem 1rem;
+  border-radius: 0 0 var(--radius) 0;
+  z-index: 10;
+}
+
+.skip:focus {
+  transform: none;
+}
+
+/* ---------------------------------------------------------------- header */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid var(--rule);
+}
+
+header .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.4rem;
+  margin: 0;
+  padding: 0;
+}
+
+header nav a {
+  color: var(--muted);
+  text-decoration: none;
+  /* 44 px of height on a phone, which is the smallest target a thumb hits
+     reliably. */
+  display: inline-block;
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+header nav a:hover { color: var(--ink); }
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand img {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+}
+
+.brand .accent { color: var(--accent-ink); }
+
+/* ------------------------------------------------------------------ main */
+
+main { display: block; }
+
+section { scroll-margin-top: 5rem; }
+
+h1 {
+  font-size: clamp(2.1rem, 5vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.75rem;
+}
+
+h2 {
+  font-size: 1.45rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+  line-height: 1.35;
+  margin: 0 0 0.3rem;
+}
+
+p, ul, ol, table { margin: 0 0 1rem; }
+
+.lead {
+  font-size: 1.15rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+.tagline {
+  font-size: 1.05rem;
+  color: var(--accent-ink);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin: 0 0 1rem;
+}
+
+/* The small label above a section heading. */
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+}
+
+ul, ol { padding-left: 1.35rem; }
+li { margin-bottom: 0.35rem; }
+
+a { color: var(--accent-ink); }
+a:hover { text-decoration: none; }
+
+/* A visible ring, not the browser's default outline removed and forgotten. */
+a:focus-visible,
+.button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---------------------------------------------------------------- pieces */
+
+.hero {
+  padding: 4.5rem 0 3.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.hero .mark {
+  width: 88px;
+  height: 88px;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.hero .lead { max-width: var(--measure); }
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.7rem 1.3rem;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.button:hover { border-color: var(--accent); }
+
+.button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+}
+
+.button.primary:hover {
+  background: var(--accent-ink);
+  border-color: var(--accent-ink);
+}
+
+section.pad { padding: 3.5rem 0; }
+
+.band {
+  background: var(--surface);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+/* Cards, and the one grid rule the whole page uses. `auto-fit` with a
+   minimum is what makes 320 px, 768 px and 1440 px the same stylesheet
+   rather than three breakpoints. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
+  gap: 1rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.grid.narrow {
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 1.35rem;
+  margin: 0;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* The availability of one platform, stated rather than implied. */
+.pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--rule);
+  color: var(--muted);
+  background: var(--paper);
+  margin-top: 0.6rem;
+}
+
+/* -------------------------------------------- the two long reading pages */
+
+main.wrap { padding-top: 2.5rem; padding-bottom: 3rem; }
+
+main.wrap h2 {
+  font-size: 1.25rem;
+  margin: 2.5rem 0 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+main.wrap h3 {
+  margin: 1.75rem 0 0.35rem;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    monospace;
+  font-size: 0.9em;
+  background: color-mix(in srgb, var(--rule) 45%, transparent);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+.note {
+  border-left: 3px solid var(--accent);
+  padding: 0.1rem 0 0.1rem 1rem;
+  margin: 1.5rem 0;
+  color: var(--muted);
+}
+
+.flow {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  overflow-x: auto;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 0.9rem 1rem;
+  margin: 1.25rem 0;
+}
+
+/* A wide table on a narrow phone scrolls inside itself; the page never does. */
+.scroll { overflow-x: auto; margin: 0 0 1.25rem; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.5rem 0.75rem 0.5rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+th { font-weight: 600; }
+
+.meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.meta div { margin-bottom: 0.15rem; }
+
+/* ---------------------------------------------------------------- footer */
+
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 2.5rem 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+footer .brand {
+  font-size: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+footer nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.5rem;
+  margin: 0 0 0.75rem;
+  padding: 0;
+}
+
+footer p { margin: 0; }
+
+@media (max-width: 30rem) {
+  body { font-size: 16px; }
+  .wrap { padding: 0 1.15rem; }
+  /* Four navigation items on one line at 320 px, spread rather than wrapped:
+     the widths are known and they fit, but only if the gap gives way first. */
+  header nav { width: 100%; }
+  header nav ul { justify-content: space-between; gap: 0.25rem 0.7rem; }
+  .hero { padding: 3rem 0 2.5rem; }
+  .hero .mark { width: 72px; height: 72px; border-radius: 16px; }
+  section.pad { padding: 2.75rem 0; }
+  .actions .button { flex: 1 1 100%; text-align: center; }
+}
+
+/* ---------------------------------------------------------- languages */
+
+.lang { position: relative; font-size: 0.9rem; }
+.lang summary {
+  cursor: pointer;
+  list-style: none;
+  color: var(--muted);
+  padding: 0.5rem 0;
+}
+.lang summary::-webkit-details-marker { display: none; }
+.lang summary::after { content: " ▾"; }
+.lang[open] summary { color: var(--ink); }
+.lang ul {
+  position: absolute;
+  inset-inline-end: 0;
+  z-index: 6;
+  list-style: none;
+  margin: 0.25rem 0 0;
+  padding: 0.4rem 0;
+  min-width: 11rem;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
+}
+.lang li { margin: 0; }
+.lang a {
+  display: block;
+  padding: 0.45rem 1rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+.lang a:hover, .lang a[aria-current="true"] { color: var(--accent-ink); }
+
+/* Arabic reads right to left; lists indent from the right. */
+[dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 1.35rem; }
