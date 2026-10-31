@@ -71,16 +71,16 @@
 <h2>Stand dieser Version</h2>
 <ul class="note">
   <li><strong>Vorabversion für macOS</strong> (Apple Silicon und Intel). Die Windows-Version ist noch nicht verfügbar.</li>
-  <li><strong>Noch nicht an einer echten Platine validiert</strong>: geprüft mit automatischen Tests an simulierten Platinen und durch Starten der Anwendung. Die USB-Installation ist dieselbe wie in Belksiri Scan auf dem Mac.</li>
-  <li><strong>Ad-hoc signiert, nicht von Apple notarisiert</strong>: macOS fragt beim ersten Öffnen nach einer Erlaubnis (siehe unten).</li>
+  <li><strong>Noch nicht an einer echten Platine validiert</strong>: geprüft mit automatischen Tests an simulierten Platinen und durch Starten der Anwendung. Die USB-Installation ist dieselbe wie in Belksiri Scan auf dem Mac. Die Intel-Version wurde nur unter Rosetta auf einem Mac mit Apple Silicon gestartet: Auf einem Intel-Mac ist sie noch nicht getestet.</li>
+  <li><strong>Mit Developer ID signiert und von Apple notarisiert</strong>: macOS öffnet sie normal, nach der üblichen Bestätigung für eine geladene App.</li>
 </ul>
 
 <h2>Herunterladen</h2>
 <div class="scroll">
 <table>
   <tr><th>Datei</th><th>Für</th><th>SHA-256</th></tr>
-  <tr><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg</a></td><td>Mac mit Apple Silicon (M1 und neuer)</td><td><code>47335135ebbc598ba0fe59485681fd9a078264faa20c68fc05f11eb7558374ad</code></td></tr>
-  <tr><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg</a></td><td>Intel-Mac</td><td><code>0fb2b4f7dd52dfc8a78a739dd3b7a23e59bfdaeece3daf96d7759d70e1b46293</code></td></tr>
+  <tr><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg</a></td><td>Mac mit Apple Silicon (M1 und neuer)</td><td><code>19a285dd8bef678c1ef29df1b6e49d09ffd0474421203469d2d129b217e4b88e</code></td></tr>
+  <tr><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg</a></td><td>Intel-Mac</td><td><code>081c041b33cae9f25a9b873dfbf065662bba6600107d3f26de09ee3242e56b67</code></td></tr>
 </table>
 </div>
 <p>Windows 10/11: noch nicht verfügbar.</p>
@@ -101,10 +101,8 @@
 <h2>Die Anwendung zum ersten Mal öffnen</h2>
 <ol>
   <li>Öffnen Sie die <code>.dmg</code>-Datei und ziehen Sie <strong>Belksiri Firmware Installer</strong> in <strong>Programme</strong>.</li>
-  <li>Öffnen Sie die Anwendung. macOS meldet, dass sie nicht überprüft werden konnte: Klicken Sie auf <strong>Fertig</strong>.</li>
-  <li>Öffnen Sie <strong>Systemeinstellungen › Datenschutz &amp; Sicherheit</strong>, scrollen Sie zu <strong>Sicherheit</strong>, klicken Sie neben Belksiri Firmware Installer auf <strong>Dennoch öffnen</strong> und bestätigen Sie.</li>
+  <li>Öffnen Sie die Anwendung und bestätigen Sie: macOS fragt bei einer geladenen App einmal nach.</li>
 </ol>
-<p>Diese Erlaubnis gilt nur für diese Anwendung. Schalten Sie die Schutzfunktionen Ihres Mac nicht ab.</p>
 
 <h2>Die Firmware installieren</h2>
 <ol>
