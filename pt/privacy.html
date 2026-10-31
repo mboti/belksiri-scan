@@ -66,7 +66,7 @@
 <h1>Política de Privacidade</h1>
 
 <div class="meta">
-  <div><strong>Última atualização:</strong> 27 de outubro de 2026</div>
+  <div><strong>Última atualização:</strong> 29 de outubro de 2026</div>
   <div><strong>Aplica-se a:</strong> Belksiri Scan para iPhone, iPad e Mac</div>
   <div><strong>Publicado por:</strong> Belksiri, um programador independente em França &mdash; ver secção J</div>
   <div><strong>Contacto:</strong> <a href="mailto:mboti.dev@gmail.com">mboti.dev@gmail.com</a></div>
@@ -104,10 +104,9 @@
 <p>A placa liga-se à Internet apenas para executar os testes que inicia (por exemplo, um ping para um endereço que escolhe).</p>
 
 <h2>D. Testes de rede e os serviços que contactam</h2>
-<p>Estes testes são iniciados por si, com uma exceção indicada abaixo. Não enviam nenhuma informação pessoal, nenhum identificador nem nenhum resultado de medição: apenas o tráfego de que o teste necessita. Os serviços recebem o seu endereço IP público e os dados técnicos de qualquer ligação, e tratam-nos segundo as suas próprias políticas.</p>
+<p>Estes testes são iniciados por si. Não enviam nenhuma informação pessoal, nenhum identificador nem nenhum resultado de medição: apenas o tráfego de que o teste necessita. Os serviços recebem o seu endereço IP público e os dados técnicos de qualquer ligação, e tratam-nos segundo as suas próprias políticas.</p>
 <ul>
-  <li><strong>Speed Test, Diagnóstico de Estado e pontos «Full» do Levantamento</strong>: transferência descendente e ascendente de dados gerados para <code>speed.cloudflare.com</code> (Cloudflare, Inc.). Um teste completo pode movimentar cerca de 10 a 100&nbsp;MB, o que pode ser descontado num plano de dados móveis. <strong>Abrir a página Speed Test</strong> estabelece uma ligação breve a esse servidor para verificar que está acessível, antes de premir Iniciar. Pode, em alternativa, introduzir o seu próprio servidor HTTPS; este é guardado apenas durante a sessão.</li>
-  <li><strong>Ping</strong>: uma ligação cronometrada (TCP, portas 443 e 80) para <code>1.1.1.1</code> (Cloudflare), <code>8.8.8.8</code> (Google), <code>9.9.9.9</code> (Quad9), o seu router ou um endereço que escreva. Um nome que escreva é primeiro resolvido pelo seu serviço DNS habitual.</li>
+  <li><strong>Ping</strong>: a partir deste dispositivo, tentativas de ligação cronometradas (TCP, porta 443 e depois 80, sem envio de dados) para <code>1.1.1.1</code> (Cloudflare), <code>8.8.8.8</code> (Google), <code>9.9.9.9</code> (Quad9), o seu router ou um endereço que escreva; quando a sua placa ESP32-C5 é a fonte de medição, é a própria placa que envia pedidos de eco ICMP para o mesmo destino. Um nome que escreva é primeiro resolvido pelo seu serviço DNS habitual. O Diagnóstico de Estado e os pontos «Full» do Levantamento utilizam apenas este ping; quando o ping do Diagnóstico de Estado foi dirigido ao seu router, este acrescenta no máximo três tentativas para <code>1.1.1.1</code> (Cloudflare), para verificar que um destino fora da sua rede local responde.</li>
   <li><strong>Diagnóstico completo</strong>: uma consulta DNS de <code>example.com</code>, uma ligação a <code>1.1.1.1</code> e ao seu router.</li>
 </ul>
 <p>Políticas destes serviços: <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a>, <a href="https://policies.google.com/privacy">Google</a>, <a href="https://quad9.net/privacy/policy/">Quad9</a>. A Belksiri não recebe os resultados de nenhum teste.</p>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preparar a placa ESP32-C5 — Belksiri Scan</title>
+<meta name="description" content="Belksiri Scan — Preparar a placa ESP32-C5">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Belksiri Scan">
+<meta property="og:title" content="Preparar a placa ESP32-C5 — Belksiri Scan">
+<meta property="og:url" content="https://mboti.github.io/belksiri-scan/pt/firmware.html">
+<link rel="canonical" href="https://mboti.github.io/belksiri-scan/pt/firmware.html">
+<link rel="alternate" hreflang="en" href="https://mboti.github.io/belksiri-scan/firmware.html">
+<link rel="alternate" hreflang="fr" href="https://mboti.github.io/belksiri-scan/fr/firmware.html">
+<link rel="alternate" hreflang="de" href="https://mboti.github.io/belksiri-scan/de/firmware.html">
+<link rel="alternate" hreflang="es" href="https://mboti.github.io/belksiri-scan/es/firmware.html">
+<link rel="alternate" hreflang="it" href="https://mboti.github.io/belksiri-scan/it/firmware.html">
+<link rel="alternate" hreflang="pt" href="https://mboti.github.io/belksiri-scan/pt/firmware.html">
+<link rel="alternate" hreflang="ru" href="https://mboti.github.io/belksiri-scan/ru/firmware.html">
+<link rel="alternate" hreflang="ar" href="https://mboti.github.io/belksiri-scan/ar/firmware.html">
+<link rel="alternate" hreflang="zh" href="https://mboti.github.io/belksiri-scan/zh/firmware.html">
+<link rel="alternate" hreflang="x-default" href="https://mboti.github.io/belksiri-scan/firmware.html">
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" type="image/png" sizes="256x256" href="../assets/icon.png">
+<link rel="apple-touch-icon" href="../assets/icon.png">
+</head>
+<body>
+
+<a class="skip" href="#main">Saltar para o conteúdo</a>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="./">
+      <img src="../assets/icon.png" alt="" width="26" height="26">
+      <span>Belksiri <span class="accent">Scan</span></span>
+    </a>
+    <nav aria-label="Belksiri Scan">
+      <ul>
+        <li><a href="./#features">Funcionalidades</a></li>
+        <li><a href="./#platforms">Plataformas</a></li>
+        <li><a href="privacy.html">Privacidade</a></li>
+        <li><a href="terms.html">Termos</a></li>
+        <li><a href="support.html">Suporte</a></li>
+      </ul>
+    </nav>
+    <details class="lang">
+      <summary aria-label="Idioma">Português</summary>
+      <nav aria-label="Idioma">
+        <ul>
+          <li><a href="../firmware.html" hreflang="en" lang="en">English</a></li>
+          <li><a href="../fr/firmware.html" hreflang="fr" lang="fr">Français</a></li>
+          <li><a href="../de/firmware.html" hreflang="de" lang="de">Deutsch</a></li>
+          <li><a href="../es/firmware.html" hreflang="es" lang="es">Español</a></li>
+          <li><a href="../it/firmware.html" hreflang="it" lang="it">Italiano</a></li>
+          <li><a href="../pt/firmware.html" hreflang="pt" lang="pt" aria-current="true">Português</a></li>
+          <li><a href="../ru/firmware.html" hreflang="ru" lang="ru">Русский</a></li>
+          <li><a href="../ar/firmware.html" hreflang="ar" lang="ar">العربية</a></li>
+          <li><a href="../zh/firmware.html" hreflang="zh" lang="zh">简体中文</a></li>
+        </ul>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+<h1>Preparar a placa ESP32-C5</h1>
+
+<p class="lead">No iPhone e no iPad, o Belksiri Scan mede com uma placa ESP32-C5. Para instalar o firmware, ligue a placa por USB a um computador e utilize o <strong>Belksiri Firmware Installer</strong>, um utilitário gratuito e autónomo: nesse computador não é necessário o Belksiri Scan, nem conta, nem ligação à Internet, nem ferramentas de desenvolvimento.</p>
+
+<h2>Estado desta versão</h2>
+<ul class="note">
+  <li><strong>Versão preliminar para macOS</strong> (Apple silicon e Intel). A versão para Windows ainda não está disponível.</li>
+  <li><strong>Ainda não validada numa placa real</strong>: testada com testes automáticos em placas simuladas e arrancando a aplicação. O motor de instalação USB é o do Belksiri Scan no Mac.</li>
+  <li><strong>Assinatura ad hoc, não notarizada pela Apple</strong>: o macOS pede uma autorização na primeira abertura (ver abaixo).</li>
+</ul>
+
+<h2>Transferir</h2>
+<div class="scroll">
+<table>
+  <tr><th>Ficheiro</th><th>Para</th><th>SHA-256</th></tr>
+  <tr><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg</a></td><td>Mac com Apple silicon (M1 e posteriores)</td><td><code>47335135ebbc598ba0fe59485681fd9a078264faa20c68fc05f11eb7558374ad</code></td></tr>
+  <tr><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg</a></td><td>Mac Intel</td><td><code>0fb2b4f7dd52dfc8a78a739dd3b7a23e59bfdaeece3daf96d7759d70e1b46293</code></td></tr>
+</table>
+</div>
+<p>Windows 10/11: ainda não disponível.</p>
+<p>Todas as informações desta versão, e o ficheiro <code>SHA256SUMS.txt</code>, estão na <a href="https://github.com/mboti/belksiri-scan/releases/tag/firmware-installer-v1.0.0">página da versão</a>.</p>
+<p>Para verificar um ficheiro transferido, compare o resultado de <code>shasum -a 256 &lt;ficheiro&gt;</code> (Terminal) com a soma indicada acima.</p>
+
+<h2>Requisitos</h2>
+<ul>
+  <li>macOS 12 ou posterior.</li>
+  <li>Uma placa <strong>ESP32-C5</strong> com pelo menos <strong>4 MB</strong> de memória flash. Qualquer outro chip, ou uma flash mais pequena ou ilegível, é recusado antes de qualquer escrita.</li>
+  <li>Um cabo USB <strong>de dados</strong>: muitos cabos só carregam.</li>
+  <li>Controlador USB: nenhum para a porta USB nativa do ESP32-C5. As placas com conversor CP210x ou CH340 só precisam de um controlador, do fabricante desse chip, no Windows.</li>
+</ul>
+
+<h2>Firmware incluído</h2>
+<p>ESP Device Studio <strong>1.0.4</strong> para ESP32-C5 (ESP-IDF v5.5.4). SHA-256 da imagem: <code>83de9994a710dba224c7ccb0248bb4e2334af38ce3e32e818c5d0cba66a9a499</code>, verificado pelo utilitário antes de escrever. Inclui a ferramenta de programação espflash 4.5.0 (licenças MIT e Apache-2.0), sem modificações.</p>
+
+<h2>Abrir a aplicação pela primeira vez</h2>
+<ol>
+  <li>Abra o ficheiro <code>.dmg</code> e arraste o <strong>Belksiri Firmware Installer</strong> para <strong>Aplicações</strong>.</li>
+  <li>Abra a aplicação. O macOS indica que não foi possível verificá-la: clique em <strong>OK</strong>.</li>
+  <li>Abra <strong>Definições do Sistema › Privacidade e segurança</strong>, desça até <strong>Segurança</strong>, clique em <strong>Abrir mesmo assim</strong> junto a Belksiri Firmware Installer e confirme.</li>
+</ol>
+<p>Esta autorização abrange apenas esta aplicação. Não desative as proteções do seu Mac.</p>
+
+<h2>Instalar o firmware</h2>
+<ol>
+  <li>Ligue a placa ESP32-C5 ao computador com um cabo USB de dados.</li>
+  <li>Verifique a linha da placa: <code>ESP32-C5 · 4 MB flash · Compatible</code>. Se estiverem ligadas várias placas, escolha uma.</li>
+  <li>Clique em <strong>Install firmware</strong> e confirme.</li>
+  <li>Aguarde <em>Firmware installed and verified</em>. Não desligue a placa nem feche a janela durante a operação.</li>
+  <li>No iPhone ou iPad, abra o Belksiri Scan e ligue-se à placa por Bluetooth.</li>
+</ol>
+<p><strong>O que é apagado:</strong> as definições guardadas na placa, incluindo a rede Wi-Fi e a respetiva palavra-passe. A janela de confirmação recorda-o. «Verified» significa que a placa foi relida e corresponde à imagem; a ligação a partir do Belksiri Scan confirma depois que o firmware funciona.</p>
+
+<h2>Se a placa não responder</h2>
+<p>Mantenha premido <strong>BOOT</strong>, prima e solte <strong>RESET</strong>, solte <strong>BOOT</strong> e clique em <strong>Try again</strong>. Em caso de erro, <strong>Copy details</strong> copia um relatório para juntar à sua mensagem para <a href="mailto:mboti.dev@gmail.com">mboti.dev@gmail.com</a>.</p>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="./">
+      <img src="../assets/icon.png" alt="" width="26" height="26">
+      <span>Belksiri <span class="accent">Scan</span></span>
+    </a>
+    <nav aria-label="Início">
+      <ul>
+        <li><a href="./">Início</a></li>
+        <li><a href="privacy.html">Política de privacidade</a></li>
+        <li><a href="terms.html">Termos de utilização</a></li>
+        <li><a href="support.html">Suporte</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2026 Belksiri. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+</body>
+</html>

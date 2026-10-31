@@ -66,7 +66,7 @@
 <h1>Politique de confidentialité</h1>
 
 <div class="meta">
-  <div><strong>Dernière mise à jour :</strong> 27 octobre 2026</div>
+  <div><strong>Dernière mise à jour :</strong> 29 octobre 2026</div>
   <div><strong>S’applique à :</strong> Belksiri Scan pour iPhone, iPad et Mac</div>
   <div><strong>Éditeur :</strong> Belksiri, développeur indépendant en France &mdash; voir la section J</div>
   <div><strong>Contact :</strong> <a href="mailto:mboti.dev@gmail.com">mboti.dev@gmail.com</a></div>
@@ -104,10 +104,9 @@
 <p>La carte ne se connecte à Internet que pour exécuter les tests que vous lancez (par exemple un ping vers une adresse que vous choisissez).</p>
 
 <h2>D. Tests réseau et services contactés</h2>
-<p>Ces tests sont lancés par vous, à une exception près indiquée ci-dessous. Ils n’envoient aucune information personnelle, aucun identifiant et aucun résultat de mesure : uniquement le trafic dont le test a besoin. Les services reçoivent votre adresse IP publique et les données techniques de toute connexion, et les traitent selon leurs propres politiques.</p>
+<p>Ces tests sont lancés par vous. Ils n’envoient aucune information personnelle, aucun identifiant et aucun résultat de mesure : uniquement le trafic dont le test a besoin. Les services reçoivent votre adresse IP publique et les données techniques de toute connexion, et les traitent selon leurs propres politiques.</p>
 <ul>
-  <li><strong>Speed Test, Diagnostic Santé et points « Full » du Relevé</strong> : téléchargement et envoi de données générées vers <code>speed.cloudflare.com</code> (Cloudflare, Inc.). Un test complet peut transférer environ 10 à 100&nbsp;Mo, ce qui peut être décompté d’un forfait de données mobiles. <strong>L’ouverture de la page Speed Test</strong> établit une courte connexion à ce serveur pour vérifier qu’il est joignable, avant que vous n’appuyiez sur Démarrer. Vous pouvez saisir à la place votre propre serveur HTTPS ; il n’est conservé que pour la session.</li>
-  <li><strong>Ping</strong> : une connexion chronométrée (TCP, ports 443 et 80) vers <code>1.1.1.1</code> (Cloudflare), <code>8.8.8.8</code> (Google), <code>9.9.9.9</code> (Quad9), votre routeur ou une adresse que vous saisissez. Un nom que vous saisissez est d’abord résolu par votre service DNS habituel.</li>
+  <li><strong>Ping</strong> : depuis cet appareil, des tentatives de connexion chronométrées (TCP, port 443 puis 80, sans envoi de données) vers <code>1.1.1.1</code> (Cloudflare), <code>8.8.8.8</code> (Google), <code>9.9.9.9</code> (Quad9), votre routeur ou une adresse que vous saisissez ; lorsque votre carte ESP32-C5 est la source de mesure, c’est la carte elle-même qui envoie des requêtes d’écho ICMP vers la même cible. Un nom que vous saisissez est d’abord résolu par votre service DNS habituel. Le Diagnostic Santé et les points « Full » du Relevé n’utilisent que ce ping ; lorsque le ping du Diagnostic Santé visait votre routeur, ce diagnostic ajoute au plus trois tentatives vers <code>1.1.1.1</code> (Cloudflare) pour vérifier qu’une cible extérieure à votre réseau local répond.</li>
   <li><strong>Diagnostic complet</strong> : une résolution DNS de <code>example.com</code>, une connexion à <code>1.1.1.1</code> et à votre routeur.</li>
 </ul>
 <p>Politiques de ces services : <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a>, <a href="https://policies.google.com/privacy">Google</a>, <a href="https://quad9.net/privacy/policy/">Quad9</a>. Belksiri ne reçoit les résultats d’aucun test.</p>

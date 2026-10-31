@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preparing the ESP32-C5 board — Belksiri Scan</title>
+<meta name="description" content="Belksiri Scan — Preparing the ESP32-C5 board">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Belksiri Scan">
+<meta property="og:title" content="Preparing the ESP32-C5 board — Belksiri Scan">
+<meta property="og:url" content="https://mboti.github.io/belksiri-scan/firmware.html">
+<link rel="canonical" href="https://mboti.github.io/belksiri-scan/firmware.html">
+<link rel="alternate" hreflang="en" href="https://mboti.github.io/belksiri-scan/firmware.html">
+<link rel="alternate" hreflang="fr" href="https://mboti.github.io/belksiri-scan/fr/firmware.html">
+<link rel="alternate" hreflang="de" href="https://mboti.github.io/belksiri-scan/de/firmware.html">
+<link rel="alternate" hreflang="es" href="https://mboti.github.io/belksiri-scan/es/firmware.html">
+<link rel="alternate" hreflang="it" href="https://mboti.github.io/belksiri-scan/it/firmware.html">
+<link rel="alternate" hreflang="pt" href="https://mboti.github.io/belksiri-scan/pt/firmware.html">
+<link rel="alternate" hreflang="ru" href="https://mboti.github.io/belksiri-scan/ru/firmware.html">
+<link rel="alternate" hreflang="ar" href="https://mboti.github.io/belksiri-scan/ar/firmware.html">
+<link rel="alternate" hreflang="zh" href="https://mboti.github.io/belksiri-scan/zh/firmware.html">
+<link rel="alternate" hreflang="x-default" href="https://mboti.github.io/belksiri-scan/firmware.html">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" sizes="256x256" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="./">
+      <img src="assets/icon.png" alt="" width="26" height="26">
+      <span>Belksiri <span class="accent">Scan</span></span>
+    </a>
+    <nav aria-label="Belksiri Scan">
+      <ul>
+        <li><a href="./#features">Features</a></li>
+        <li><a href="./#platforms">Platforms</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </nav>
+    <details class="lang">
+      <summary aria-label="Language">English</summary>
+      <nav aria-label="Language">
+        <ul>
+          <li><a href="firmware.html" hreflang="en" lang="en" aria-current="true">English</a></li>
+          <li><a href="fr/firmware.html" hreflang="fr" lang="fr">Français</a></li>
+          <li><a href="de/firmware.html" hreflang="de" lang="de">Deutsch</a></li>
+          <li><a href="es/firmware.html" hreflang="es" lang="es">Español</a></li>
+          <li><a href="it/firmware.html" hreflang="it" lang="it">Italiano</a></li>
+          <li><a href="pt/firmware.html" hreflang="pt" lang="pt">Português</a></li>
+          <li><a href="ru/firmware.html" hreflang="ru" lang="ru">Русский</a></li>
+          <li><a href="ar/firmware.html" hreflang="ar" lang="ar">العربية</a></li>
+          <li><a href="zh/firmware.html" hreflang="zh" lang="zh">简体中文</a></li>
+        </ul>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+<h1>Preparing the ESP32-C5 board</h1>
+
+<p class="lead">On iPhone and iPad, Belksiri Scan measures with an ESP32-C5 board. To install its firmware, connect the board over USB to a computer and use <strong>Belksiri Firmware Installer</strong>, a free standalone utility: no Belksiri Scan, account, Internet connection or developer tool is needed on that computer.</p>
+
+<h2>State of this version</h2>
+<ul class="note">
+  <li><strong>Pre-release for macOS</strong> (Apple silicon and Intel). The Windows version is not available yet.</li>
+  <li><strong>Not yet validated on a real board</strong>: tested with automated tests on simulated boards and by starting the application. The USB installation engine is the one Belksiri Scan uses on Mac.</li>
+  <li><strong>Ad-hoc signed, not notarised by Apple</strong>: macOS asks for permission the first time you open it (see below).</li>
+</ul>
+
+<h2>Download</h2>
+<div class="scroll">
+<table>
+  <tr><th>File</th><th>For</th><th>SHA-256</th></tr>
+  <tr><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg</a></td><td>Mac with Apple silicon (M1 and later)</td><td><code>47335135ebbc598ba0fe59485681fd9a078264faa20c68fc05f11eb7558374ad</code></td></tr>
+  <tr><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg</a></td><td>Intel Mac</td><td><code>0fb2b4f7dd52dfc8a78a739dd3b7a23e59bfdaeece3daf96d7759d70e1b46293</code></td></tr>
+</table>
+</div>
+<p>Windows 10/11: not available yet.</p>
+<p>Everything about this version, and the <code>SHA256SUMS.txt</code> file, is on the <a href="https://github.com/mboti/belksiri-scan/releases/tag/firmware-installer-v1.0.0">release page</a>.</p>
+<p>To check a downloaded file, compare the output of <code>shasum -a 256 &lt;file&gt;</code> (Terminal) with the checksum above.</p>
+
+<h2>Requirements</h2>
+<ul>
+  <li>macOS 12 or later.</li>
+  <li>An <strong>ESP32-C5</strong> board with at least <strong>4 MB</strong> of flash. Any other chip, or a smaller or unreadable flash, is refused before anything is written.</li>
+  <li>A USB <strong>data</strong> cable: many cables only charge.</li>
+  <li>USB driver: none for the ESP32-C5’s native USB port. Boards with a CP210x or CH340 bridge need a driver, from that chip’s maker, on Windows only.</li>
+</ul>
+
+<h2>Included firmware</h2>
+<p>ESP Device Studio <strong>1.0.4</strong> for ESP32-C5 (ESP-IDF v5.5.4). SHA-256 of the image: <code>83de9994a710dba224c7ccb0248bb4e2334af38ce3e32e818c5d0cba66a9a499</code>, checked by the utility before writing. It bundles the espflash 4.5.0 flashing tool (MIT and Apache-2.0 licences), unmodified.</p>
+
+<h2>Opening the application the first time</h2>
+<ol>
+  <li>Open the <code>.dmg</code> file and drag <strong>Belksiri Firmware Installer</strong> to <strong>Applications</strong>.</li>
+  <li>Open the application. macOS says it could not be verified: click <strong>Done</strong>.</li>
+  <li>Open <strong>System Settings › Privacy &amp; Security</strong>, scroll to <strong>Security</strong>, click <strong>Open Anyway</strong> next to Belksiri Firmware Installer, and confirm.</li>
+</ol>
+<p>This permission covers this application only. Do not turn off your Mac’s protections.</p>
+
+<h2>Installing the firmware</h2>
+<ol>
+  <li>Connect the ESP32-C5 board to the computer with a USB data cable.</li>
+  <li>Check the board line: <code>ESP32-C5 · 4 MB flash · Compatible</code>. If several boards are connected, choose one.</li>
+  <li>Click <strong>Install firmware</strong> and confirm.</li>
+  <li>Wait for <em>Firmware installed and verified</em>. Do not unplug the board or close the window while it runs.</li>
+  <li>On the iPhone or iPad, open Belksiri Scan and connect to the board over Bluetooth.</li>
+</ol>
+<p><strong>What is erased:</strong> the settings stored on the board, including its Wi-Fi network and password. The confirmation dialog says so. “Verified” means the board was read back and matches the image; connecting from Belksiri Scan then confirms the firmware runs.</p>
+
+<h2>If the board does not respond</h2>
+<p>Hold the <strong>BOOT</strong> button, press and release <strong>RESET</strong>, release <strong>BOOT</strong>, then click <strong>Try again</strong>. On an error, <strong>Copy details</strong> copies a report to include in your message to <a href="mailto:mboti.dev@gmail.com">mboti.dev@gmail.com</a>.</p>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="./">
+      <img src="assets/icon.png" alt="" width="26" height="26">
+      <span>Belksiri <span class="accent">Scan</span></span>
+    </a>
+    <nav aria-label="Home">
+      <ul>
+        <li><a href="./">Home</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2026 Belksiri. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

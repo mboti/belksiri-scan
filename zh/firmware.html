@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>准备 ESP32-C5 开发板 — Belksiri Scan</title>
+<meta name="description" content="Belksiri Scan — 准备 ESP32-C5 开发板">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Belksiri Scan">
+<meta property="og:title" content="准备 ESP32-C5 开发板 — Belksiri Scan">
+<meta property="og:url" content="https://mboti.github.io/belksiri-scan/zh/firmware.html">
+<link rel="canonical" href="https://mboti.github.io/belksiri-scan/zh/firmware.html">
+<link rel="alternate" hreflang="en" href="https://mboti.github.io/belksiri-scan/firmware.html">
+<link rel="alternate" hreflang="fr" href="https://mboti.github.io/belksiri-scan/fr/firmware.html">
+<link rel="alternate" hreflang="de" href="https://mboti.github.io/belksiri-scan/de/firmware.html">
+<link rel="alternate" hreflang="es" href="https://mboti.github.io/belksiri-scan/es/firmware.html">
+<link rel="alternate" hreflang="it" href="https://mboti.github.io/belksiri-scan/it/firmware.html">
+<link rel="alternate" hreflang="pt" href="https://mboti.github.io/belksiri-scan/pt/firmware.html">
+<link rel="alternate" hreflang="ru" href="https://mboti.github.io/belksiri-scan/ru/firmware.html">
+<link rel="alternate" hreflang="ar" href="https://mboti.github.io/belksiri-scan/ar/firmware.html">
+<link rel="alternate" hreflang="zh" href="https://mboti.github.io/belksiri-scan/zh/firmware.html">
+<link rel="alternate" hreflang="x-default" href="https://mboti.github.io/belksiri-scan/firmware.html">
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" type="image/png" sizes="256x256" href="../assets/icon.png">
+<link rel="apple-touch-icon" href="../assets/icon.png">
+</head>
+<body>
+
+<a class="skip" href="#main">跳至内容</a>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="./">
+      <img src="../assets/icon.png" alt="" width="26" height="26">
+      <span>Belksiri <span class="accent">Scan</span></span>
+    </a>
+    <nav aria-label="Belksiri Scan">
+      <ul>
+        <li><a href="./#features">功能</a></li>
+        <li><a href="./#platforms">平台</a></li>
+        <li><a href="privacy.html">隐私</a></li>
+        <li><a href="terms.html">条款</a></li>
+        <li><a href="support.html">支持</a></li>
+      </ul>
+    </nav>
+    <details class="lang">
+      <summary aria-label="语言">简体中文</summary>
+      <nav aria-label="语言">
+        <ul>
+          <li><a href="../firmware.html" hreflang="en" lang="en">English</a></li>
+          <li><a href="../fr/firmware.html" hreflang="fr" lang="fr">Français</a></li>
+          <li><a href="../de/firmware.html" hreflang="de" lang="de">Deutsch</a></li>
+          <li><a href="../es/firmware.html" hreflang="es" lang="es">Español</a></li>
+          <li><a href="../it/firmware.html" hreflang="it" lang="it">Italiano</a></li>
+          <li><a href="../pt/firmware.html" hreflang="pt" lang="pt">Português</a></li>
+          <li><a href="../ru/firmware.html" hreflang="ru" lang="ru">Русский</a></li>
+          <li><a href="../ar/firmware.html" hreflang="ar" lang="ar">العربية</a></li>
+          <li><a href="../zh/firmware.html" hreflang="zh" lang="zh" aria-current="true">简体中文</a></li>
+        </ul>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+<h1>准备 ESP32-C5 开发板</h1>
+
+<p class="lead">在 iPhone 和 iPad 上，Belksiri Scan 通过 ESP32-C5 开发板进行测量。要为开发板安装固件，请用 USB 将其连接到电脑，并使用免费的独立工具 <strong>Belksiri Firmware Installer</strong>：该电脑上无需 Belksiri Scan、账户、互联网连接或开发工具。</p>
+
+<h2>此版本的状态</h2>
+<ul class="note">
+  <li><strong>macOS 预览版</strong>（Apple 芯片和 Intel）。Windows 版本尚未提供。</li>
+  <li><strong>尚未在真实开发板上验证</strong>：已通过模拟开发板上的自动化测试和应用启动测试。USB 安装引擎与 Mac 版 Belksiri Scan 相同。</li>
+  <li><strong>临时（ad hoc）签名，未经 Apple 公证</strong>：首次打开时 macOS 会要求授权（见下文）。</li>
+</ul>
+
+<h2>下载</h2>
+<div class="scroll">
+<table>
+  <tr><th>文件</th><th>适用于</th><th>SHA-256</th></tr>
+  <tr><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg</a></td><td>搭载 Apple 芯片的 Mac（M1 及更新）</td><td><code>47335135ebbc598ba0fe59485681fd9a078264faa20c68fc05f11eb7558374ad</code></td></tr>
+  <tr><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg</a></td><td>搭载 Intel 处理器的 Mac</td><td><code>0fb2b4f7dd52dfc8a78a739dd3b7a23e59bfdaeece3daf96d7759d70e1b46293</code></td></tr>
+</table>
+</div>
+<p>Windows 10/11：尚未提供。</p>
+<p>此版本的全部信息以及 <code>SHA256SUMS.txt</code> 文件见<a href="https://github.com/mboti/belksiri-scan/releases/tag/firmware-installer-v1.0.0">版本页面</a>。</p>
+<p>要校验下载的文件，请将 <code>shasum -a 256 &lt;文件&gt;</code>（终端）的输出与上方的校验值比较。</p>
+
+<h2>前提条件</h2>
+<ul>
+  <li>macOS 12 或更高版本。</li>
+  <li>闪存不少于 <strong>4 MB</strong> 的 <strong>ESP32-C5</strong> 开发板。任何其他芯片，或闪存更小、无法读取的开发板，都会在写入前被拒绝。</li>
+  <li>可传输<strong>数据</strong>的 USB 线：很多线只能充电。</li>
+  <li>USB 驱动：ESP32-C5 的原生 USB 接口无需驱动。带 CP210x 或 CH340 转换芯片的开发板仅在 Windows 上需要该芯片厂商的驱动。</li>
+</ul>
+
+<h2>内置固件</h2>
+<p>适用于 ESP32-C5 的 ESP Device Studio <strong>1.0.4</strong>（ESP-IDF v5.5.4）。镜像的 SHA-256：<code>83de9994a710dba224c7ccb0248bb4e2334af38ce3e32e818c5d0cba66a9a499</code>，写入前由工具校验。内含未经修改的烧录工具 espflash 4.5.0（MIT 和 Apache-2.0 许可）。</p>
+
+<h2>首次打开应用</h2>
+<ol>
+  <li>打开 <code>.dmg</code> 文件，将 <strong>Belksiri Firmware Installer</strong> 拖到<strong>应用程序</strong>。</li>
+  <li>打开应用。macOS 会提示无法验证该应用：点击<strong>完成</strong>。</li>
+  <li>打开<strong>系统设置 › 隐私与安全性</strong>，滚动到<strong>安全性</strong>，点击 Belksiri Firmware Installer 旁的<strong>仍要打开</strong>，然后确认。</li>
+</ol>
+<p>此授权仅适用于此应用。请勿关闭 Mac 的保护功能。</p>
+
+<h2>安装固件</h2>
+<ol>
+  <li>用可传输数据的 USB 线将 ESP32-C5 开发板连接到电脑。</li>
+  <li>检查开发板一行：<code>ESP32-C5 · 4 MB flash · Compatible</code>。如连接了多块开发板，请选择其中一块。</li>
+  <li>点击 <strong>Install firmware</strong> 并确认。</li>
+  <li>等待显示 <em>Firmware installed and verified</em>。操作期间请勿拔下开发板或关闭窗口。</li>
+  <li>在 iPhone 或 iPad 上打开 Belksiri Scan，通过蓝牙连接开发板。</li>
+</ol>
+<p><strong>会被清除的内容：</strong>开发板上保存的设置，包括其 Wi-Fi 网络和密码。确认对话框会提示这一点。“Verified”表示已回读开发板且与镜像一致；随后从 Belksiri Scan 连接即可确认固件正在运行。</p>
+
+<h2>如果开发板没有响应</h2>
+<p>按住 <strong>BOOT</strong> 键，按下并松开 <strong>RESET</strong>，松开 <strong>BOOT</strong>，然后点击 <strong>Try again</strong>。出错时，<strong>Copy details</strong> 会复制一份报告，可附在发给 <a href="mailto:mboti.dev@gmail.com">mboti.dev@gmail.com</a> 的邮件中。</p>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="./">
+      <img src="../assets/icon.png" alt="" width="26" height="26">
+      <span>Belksiri <span class="accent">Scan</span></span>
+    </a>
+    <nav aria-label="首页">
+      <ul>
+        <li><a href="./">首页</a></li>
+        <li><a href="privacy.html">隐私政策</a></li>
+        <li><a href="terms.html">使用条款</a></li>
+        <li><a href="support.html">支持</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2026 Belksiri. 保留所有权利。</p>
+  </div>
+</footer>
+
+</body>
+</html>

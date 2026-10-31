@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تجهيز لوحة ESP32-C5 — Belksiri Scan</title>
+<meta name="description" content="Belksiri Scan — تجهيز لوحة ESP32-C5">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Belksiri Scan">
+<meta property="og:title" content="تجهيز لوحة ESP32-C5 — Belksiri Scan">
+<meta property="og:url" content="https://mboti.github.io/belksiri-scan/ar/firmware.html">
+<link rel="canonical" href="https://mboti.github.io/belksiri-scan/ar/firmware.html">
+<link rel="alternate" hreflang="en" href="https://mboti.github.io/belksiri-scan/firmware.html">
+<link rel="alternate" hreflang="fr" href="https://mboti.github.io/belksiri-scan/fr/firmware.html">
+<link rel="alternate" hreflang="de" href="https://mboti.github.io/belksiri-scan/de/firmware.html">
+<link rel="alternate" hreflang="es" href="https://mboti.github.io/belksiri-scan/es/firmware.html">
+<link rel="alternate" hreflang="it" href="https://mboti.github.io/belksiri-scan/it/firmware.html">
+<link rel="alternate" hreflang="pt" href="https://mboti.github.io/belksiri-scan/pt/firmware.html">
+<link rel="alternate" hreflang="ru" href="https://mboti.github.io/belksiri-scan/ru/firmware.html">
+<link rel="alternate" hreflang="ar" href="https://mboti.github.io/belksiri-scan/ar/firmware.html">
+<link rel="alternate" hreflang="zh" href="https://mboti.github.io/belksiri-scan/zh/firmware.html">
+<link rel="alternate" hreflang="x-default" href="https://mboti.github.io/belksiri-scan/firmware.html">
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" type="image/png" sizes="256x256" href="../assets/icon.png">
+<link rel="apple-touch-icon" href="../assets/icon.png">
+</head>
+<body>
+
+<a class="skip" href="#main">انتقل إلى المحتوى</a>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="./">
+      <img src="../assets/icon.png" alt="" width="26" height="26">
+      <span>Belksiri <span class="accent">Scan</span></span>
+    </a>
+    <nav aria-label="Belksiri Scan">
+      <ul>
+        <li><a href="./#features">الميزات</a></li>
+        <li><a href="./#platforms">المنصات</a></li>
+        <li><a href="privacy.html">الخصوصية</a></li>
+        <li><a href="terms.html">الشروط</a></li>
+        <li><a href="support.html">الدعم</a></li>
+      </ul>
+    </nav>
+    <details class="lang">
+      <summary aria-label="اللغة">العربية</summary>
+      <nav aria-label="اللغة">
+        <ul>
+          <li><a href="../firmware.html" hreflang="en" lang="en">English</a></li>
+          <li><a href="../fr/firmware.html" hreflang="fr" lang="fr">Français</a></li>
+          <li><a href="../de/firmware.html" hreflang="de" lang="de">Deutsch</a></li>
+          <li><a href="../es/firmware.html" hreflang="es" lang="es">Español</a></li>
+          <li><a href="../it/firmware.html" hreflang="it" lang="it">Italiano</a></li>
+          <li><a href="../pt/firmware.html" hreflang="pt" lang="pt">Português</a></li>
+          <li><a href="../ru/firmware.html" hreflang="ru" lang="ru">Русский</a></li>
+          <li><a href="../ar/firmware.html" hreflang="ar" lang="ar" aria-current="true">العربية</a></li>
+          <li><a href="../zh/firmware.html" hreflang="zh" lang="zh">简体中文</a></li>
+        </ul>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+<h1>تجهيز لوحة ESP32-C5</h1>
+
+<p class="lead">على iPhone وiPad، يُجري Belksiri Scan القياسات بواسطة لوحة ESP32-C5. لتثبيت البرنامج الثابت عليها، وصّل اللوحة عبر USB بحاسوب واستخدم <strong>Belksiri Firmware Installer</strong>، وهو أداة مجانية مستقلة: لا حاجة على هذا الحاسوب إلى Belksiri Scan ولا إلى حساب ولا إلى اتصال بالإنترنت ولا إلى أدوات تطوير.</p>
+
+<h2>حالة هذا الإصدار</h2>
+<ul class="note">
+  <li><strong>إصدار تمهيدي لنظام macOS</strong> (Apple silicon وIntel). إصدار Windows غير متاح بعد.</li>
+  <li><strong>لم يُتحقَّق منه بعد على لوحة حقيقية</strong>: اختُبر باختبارات آلية على لوحات محاكاة وبتشغيل التطبيق. محرك التثبيت عبر USB هو نفسه المستخدم في Belksiri Scan على Mac.</li>
+  <li><strong>توقيع مخصص (ad hoc) وغير موثّق (notarized) من Apple</strong>: يطلب macOS إذنًا عند أول فتح (انظر أدناه).</li>
+</ul>
+
+<h2>التنزيل</h2>
+<div class="scroll">
+<table>
+  <tr><th>الملف</th><th>لـ</th><th>SHA-256</th></tr>
+  <tr><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg</a></td><td>Mac بمعالج Apple silicon (M1 وما بعده)</td><td><code>47335135ebbc598ba0fe59485681fd9a078264faa20c68fc05f11eb7558374ad</code></td></tr>
+  <tr><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg</a></td><td>Mac بمعالج Intel</td><td><code>0fb2b4f7dd52dfc8a78a739dd3b7a23e59bfdaeece3daf96d7759d70e1b46293</code></td></tr>
+</table>
+</div>
+<p>Windows 10/11: غير متاح بعد.</p>
+<p>كل معلومات هذا الإصدار، والملف <code>SHA256SUMS.txt</code>، موجودة في <a href="https://github.com/mboti/belksiri-scan/releases/tag/firmware-installer-v1.0.0">صفحة الإصدار</a>.</p>
+<p>للتحقق من ملف منزَّل، قارن ناتج الأمر <code>shasum -a 256 &lt;file&gt;</code> (في Terminal) بالبصمة أعلاه.</p>
+
+<h2>المتطلبات</h2>
+<ul>
+  <li>macOS 12 أو أحدث.</li>
+  <li>لوحة <strong>ESP32-C5</strong> بذاكرة فلاش لا تقل عن <strong>4 ميغابايت</strong>. أي شريحة أخرى، أو ذاكرة فلاش أصغر أو تتعذر قراءتها، تُرفض قبل أي كتابة.</li>
+  <li>كابل USB <strong>لنقل البيانات</strong>: كثير من الكابلات للشحن فقط.</li>
+  <li>برنامج تشغيل USB: لا حاجة إليه لمنفذ USB المدمج في ESP32-C5. اللوحات المزودة بمحوّل CP210x أو CH340 تحتاج إلى برنامج تشغيل من صانع تلك الشريحة على Windows فقط.</li>
+</ul>
+
+<h2>البرنامج الثابت المضمَّن</h2>
+<p>ESP Device Studio <strong>1.0.4</strong> للوحة ESP32-C5 (ESP-IDF v5.5.4). بصمة SHA-256 للصورة: <code>83de9994a710dba224c7ccb0248bb4e2334af38ce3e32e818c5d0cba66a9a499</code>، وتتحقق منها الأداة قبل الكتابة. تتضمن أداة البرمجة espflash 4.5.0 (رخصتا MIT وApache-2.0) دون تعديل.</p>
+
+<h2>فتح التطبيق للمرة الأولى</h2>
+<ol>
+  <li>افتح ملف <code>.dmg</code> واسحب <strong>Belksiri Firmware Installer</strong> إلى <strong>التطبيقات</strong>.</li>
+  <li>افتح التطبيق. سيذكر macOS أنه تعذر التحقق منه: انقر <strong>تم</strong>.</li>
+  <li>افتح <strong>إعدادات النظام › الخصوصية والأمن</strong>، وانتقل إلى قسم <strong>الأمن</strong>، وانقر <strong>الفتح على أي حال</strong> بجوار Belksiri Firmware Installer، ثم أكّد.</li>
+</ol>
+<p>يقتصر هذا الإذن على هذا التطبيق وحده. لا تعطّل وسائل الحماية في جهاز Mac.</p>
+
+<h2>تثبيت البرنامج الثابت</h2>
+<ol>
+  <li>وصّل لوحة ESP32-C5 بالحاسوب بكابل USB لنقل البيانات.</li>
+  <li>تحقق من سطر اللوحة: <code>ESP32-C5 · 4 MB flash · Compatible</code>. إذا كانت عدة لوحات موصولة، فاختر واحدة.</li>
+  <li>انقر <strong>Install firmware</strong> ثم أكّد.</li>
+  <li>انتظر ظهور <em>Firmware installed and verified</em>. لا تفصل اللوحة ولا تغلق النافذة أثناء العملية.</li>
+  <li>على iPhone أو iPad، افتح Belksiri Scan واتصل باللوحة عبر Bluetooth.</li>
+</ol>
+<p><strong>ما يُمحى:</strong> الإعدادات المحفوظة على اللوحة، ومنها شبكة Wi-Fi وكلمة مرورها. وتذكّر نافذة التأكيد بذلك. تعني «Verified» أن محتوى اللوحة أُعيدت قراءته وطابق الصورة؛ ثم يؤكد الاتصال من Belksiri Scan أن البرنامج الثابت يعمل.</p>
+
+<h2>إذا لم تستجب اللوحة</h2>
+<p>اضغط مطولًا على زر <strong>BOOT</strong>، واضغط <strong>RESET</strong> ثم حرّره، وحرّر <strong>BOOT</strong>، ثم انقر <strong>Try again</strong>. عند حدوث خطأ، ينسخ <strong>Copy details</strong> تقريرًا لإرفاقه برسالتك إلى <a href="mailto:mboti.dev@gmail.com">mboti.dev@gmail.com</a>.</p>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="./">
+      <img src="../assets/icon.png" alt="" width="26" height="26">
+      <span>Belksiri <span class="accent">Scan</span></span>
+    </a>
+    <nav aria-label="الرئيسية">
+      <ul>
+        <li><a href="./">الرئيسية</a></li>
+        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+        <li><a href="terms.html">شروط الاستخدام</a></li>
+        <li><a href="support.html">الدعم</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2026 Belksiri. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+</body>
+</html>

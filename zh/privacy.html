@@ -66,7 +66,7 @@
 <h1>隐私政策</h1>
 
 <div class="meta">
-  <div><strong>最后更新：</strong>2026年10月27日</div>
+  <div><strong>最后更新：</strong>2026年10月29日</div>
   <div><strong>适用于：</strong>iPhone、iPad 和 Mac 版 Belksiri Scan</div>
   <div><strong>发布者：</strong>Belksiri，法国的一名独立开发者 &mdash; 见第 J 节</div>
   <div><strong>联系方式：</strong><a href="mailto:mboti.dev@gmail.com">mboti.dev@gmail.com</a></div>
@@ -104,10 +104,9 @@
 <p>开发板仅为运行您启动的测试（例如对您选择的地址执行 ping）而连接互联网。</p>
 
 <h2>D. 网络测试及其联系的服务</h2>
-<p>这些测试由您启动，下文注明的一个例外除外。它们不发送任何个人信息、任何标识符或任何测量结果：只发送测试所需的流量。这些服务会收到您的公网 IP 地址以及任何连接都具有的技术数据，并根据其自身的政策进行处理。</p>
+<p>这些测试由您启动。它们不发送任何个人信息、任何标识符或任何测量结果：只发送测试所需的流量。这些服务会收到您的公网 IP 地址以及任何连接都具有的技术数据，并根据其自身的政策进行处理。</p>
 <ul>
-  <li><strong>Speed Test、状态诊断和勘测中的“Full”测量点</strong>：向 <code>speed.cloudflare.com</code>（Cloudflare, Inc.）下载和上传生成的数据。一次完整测试可能传输约 10 至 100&nbsp;MB 数据，可能计入移动数据套餐。<strong>打开 Speed Test 页面</strong>时，在您按下“开始”之前，会与该服务器建立一次短暂连接以检查其是否可达。您也可以改为输入自己的 HTTPS 服务器；该服务器仅在本次会话期间保留。</li>
-  <li><strong>Ping</strong>：向 <code>1.1.1.1</code>（Cloudflare）、<code>8.8.8.8</code>（Google）、<code>9.9.9.9</code>（Quad9）、您的路由器或您输入的地址发起计时连接（TCP，端口 443 和 80）。您输入的名称会先由您常用的 DNS 服务解析。</li>
+  <li><strong>Ping</strong>：从本设备向 <code>1.1.1.1</code>（Cloudflare）、<code>8.8.8.8</code>（Google）、<code>9.9.9.9</code>（Quad9）、您的路由器或您输入的地址发起计时连接尝试（TCP，先试端口 443，再试 80，不发送任何数据）；当您的 ESP32-C5 开发板作为测量源时，由开发板自身向同一目标发送 ICMP 回显请求。您输入的名称会先由您常用的 DNS 服务解析。状态诊断和勘测中的“Full”测量点仅使用此 ping；当状态诊断的 ping 目标是您的路由器时，它最多会再向 <code>1.1.1.1</code>（Cloudflare）发起三次尝试，以确认本地网络之外的目标有响应。</li>
   <li><strong>完整诊断</strong>：对 <code>example.com</code> 进行 DNS 查询，并连接 <code>1.1.1.1</code> 和您的路由器。</li>
 </ul>
 <p>这些服务的政策：<a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a>、<a href="https://policies.google.com/privacy">Google</a>、<a href="https://quad9.net/privacy/policy/">Quad9</a>。Belksiri 不会收到任何测试的结果。</p>

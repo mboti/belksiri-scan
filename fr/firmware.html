@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Préparer la carte ESP32-C5 — Belksiri Scan</title>
+<meta name="description" content="Belksiri Scan — Préparer la carte ESP32-C5">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Belksiri Scan">
+<meta property="og:title" content="Préparer la carte ESP32-C5 — Belksiri Scan">
+<meta property="og:url" content="https://mboti.github.io/belksiri-scan/fr/firmware.html">
+<link rel="canonical" href="https://mboti.github.io/belksiri-scan/fr/firmware.html">
+<link rel="alternate" hreflang="en" href="https://mboti.github.io/belksiri-scan/firmware.html">
+<link rel="alternate" hreflang="fr" href="https://mboti.github.io/belksiri-scan/fr/firmware.html">
+<link rel="alternate" hreflang="de" href="https://mboti.github.io/belksiri-scan/de/firmware.html">
+<link rel="alternate" hreflang="es" href="https://mboti.github.io/belksiri-scan/es/firmware.html">
+<link rel="alternate" hreflang="it" href="https://mboti.github.io/belksiri-scan/it/firmware.html">
+<link rel="alternate" hreflang="pt" href="https://mboti.github.io/belksiri-scan/pt/firmware.html">
+<link rel="alternate" hreflang="ru" href="https://mboti.github.io/belksiri-scan/ru/firmware.html">
+<link rel="alternate" hreflang="ar" href="https://mboti.github.io/belksiri-scan/ar/firmware.html">
+<link rel="alternate" hreflang="zh" href="https://mboti.github.io/belksiri-scan/zh/firmware.html">
+<link rel="alternate" hreflang="x-default" href="https://mboti.github.io/belksiri-scan/firmware.html">
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" type="image/png" sizes="256x256" href="../assets/icon.png">
+<link rel="apple-touch-icon" href="../assets/icon.png">
+</head>
+<body>
+
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="./">
+      <img src="../assets/icon.png" alt="" width="26" height="26">
+      <span>Belksiri <span class="accent">Scan</span></span>
+    </a>
+    <nav aria-label="Belksiri Scan">
+      <ul>
+        <li><a href="./#features">Fonctions</a></li>
+        <li><a href="./#platforms">Plateformes</a></li>
+        <li><a href="privacy.html">Confidentialité</a></li>
+        <li><a href="terms.html">Conditions</a></li>
+        <li><a href="support.html">Assistance</a></li>
+      </ul>
+    </nav>
+    <details class="lang">
+      <summary aria-label="Langue">Français</summary>
+      <nav aria-label="Langue">
+        <ul>
+          <li><a href="../firmware.html" hreflang="en" lang="en">English</a></li>
+          <li><a href="../fr/firmware.html" hreflang="fr" lang="fr" aria-current="true">Français</a></li>
+          <li><a href="../de/firmware.html" hreflang="de" lang="de">Deutsch</a></li>
+          <li><a href="../es/firmware.html" hreflang="es" lang="es">Español</a></li>
+          <li><a href="../it/firmware.html" hreflang="it" lang="it">Italiano</a></li>
+          <li><a href="../pt/firmware.html" hreflang="pt" lang="pt">Português</a></li>
+          <li><a href="../ru/firmware.html" hreflang="ru" lang="ru">Русский</a></li>
+          <li><a href="../ar/firmware.html" hreflang="ar" lang="ar">العربية</a></li>
+          <li><a href="../zh/firmware.html" hreflang="zh" lang="zh">简体中文</a></li>
+        </ul>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+<h1>Préparer la carte ESP32-C5</h1>
+
+<p class="lead">Sur iPhone et iPad, Belksiri Scan mesure avec une carte ESP32-C5. Pour installer son firmware, branchez la carte en USB à un ordinateur et utilisez <strong>Belksiri Firmware Installer</strong>, un utilitaire gratuit et autonome : ni Belksiri Scan, ni compte, ni connexion Internet, ni outil de développement ne sont nécessaires sur cet ordinateur.</p>
+
+<h2>État de cette version</h2>
+<ul class="note">
+  <li><strong>Préversion pour macOS</strong> (Apple silicon et Intel). La version Windows n’est pas encore disponible.</li>
+  <li><strong>Pas encore validée sur une carte réelle</strong> : testée par des tests automatiques sur cartes simulées et par le démarrage de l’application. Le moteur d’installation USB est celui de Belksiri Scan sur Mac.</li>
+  <li><strong>Signature ad hoc, non notarisée par Apple</strong> : macOS demande une autorisation à la première ouverture (voir plus bas).</li>
+</ul>
+
+<h2>Télécharger</h2>
+<div class="scroll">
+<table>
+  <tr><th>Fichier</th><th>Pour</th><th>SHA-256</th></tr>
+  <tr><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg</a></td><td>Mac Apple silicon (M1 et suivants)</td><td><code>47335135ebbc598ba0fe59485681fd9a078264faa20c68fc05f11eb7558374ad</code></td></tr>
+  <tr><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg</a></td><td>Mac Intel</td><td><code>0fb2b4f7dd52dfc8a78a739dd3b7a23e59bfdaeece3daf96d7759d70e1b46293</code></td></tr>
+</table>
+</div>
+<p>Windows 10/11 : pas encore disponible.</p>
+<p>Toutes les informations de la version, et le fichier <code>SHA256SUMS.txt</code>, sont sur la <a href="https://github.com/mboti/belksiri-scan/releases/tag/firmware-installer-v1.0.0">page de la version</a>.</p>
+<p>Pour vérifier un fichier téléchargé, comparez le résultat de <code>shasum -a 256 &lt;fichier&gt;</code> (Terminal) avec l’empreinte ci-dessus.</p>
+
+<h2>Prérequis</h2>
+<ul>
+  <li>macOS 12 ou ultérieur.</li>
+  <li>Une carte <strong>ESP32-C5</strong> avec au moins <strong>4 Mo</strong> de mémoire flash. Toute autre puce, ou une flash plus petite ou illisible, est refusée avant toute écriture.</li>
+  <li>Un câble USB <strong>de données</strong> : beaucoup de câbles ne font que charger.</li>
+  <li>Pilote USB : aucun pour le port USB natif de l’ESP32-C5. Les cartes équipées d’un convertisseur CP210x ou CH340 n’ont besoin d’un pilote, fourni par le fabricant de cette puce, que sous Windows.</li>
+</ul>
+
+<h2>Firmware inclus</h2>
+<p>ESP Device Studio <strong>1.0.4</strong> pour ESP32-C5 (ESP-IDF v5.5.4). Empreinte SHA-256 de l’image : <code>83de9994a710dba224c7ccb0248bb4e2334af38ce3e32e818c5d0cba66a9a499</code>. L’utilitaire la vérifie avant d’écrire. Il intègre l’outil de programmation espflash 4.5.0 (licences MIT et Apache-2.0), non modifié.</p>
+
+<h2>Ouvrir l’application la première fois</h2>
+<ol>
+  <li>Ouvrez le fichier <code>.dmg</code> et glissez <strong>Belksiri Firmware Installer</strong> dans <strong>Applications</strong>.</li>
+  <li>Ouvrez l’application. macOS indique qu’elle n’a pas pu être vérifiée : cliquez <strong>Terminé</strong>.</li>
+  <li>Ouvrez <strong>Réglages Système › Confidentialité et sécurité</strong>, descendez jusqu’à <strong>Sécurité</strong>, cliquez <strong>Ouvrir quand même</strong> en face de Belksiri Firmware Installer, puis confirmez.</li>
+</ol>
+<p>Cette autorisation ne concerne que cette application. Ne désactivez pas les protections de votre Mac.</p>
+
+<h2>Installer le firmware</h2>
+<ol>
+  <li>Branchez la carte ESP32-C5 à l’ordinateur avec un câble USB de données.</li>
+  <li>Vérifiez la ligne de la carte : <code>ESP32-C5 · 4 MB flash · Compatible</code>. Si plusieurs cartes sont branchées, choisissez-en une.</li>
+  <li>Cliquez <strong>Install firmware</strong> et confirmez.</li>
+  <li>Attendez <em>Firmware installed and verified</em>. Ne débranchez pas la carte et ne fermez pas la fenêtre pendant l’opération.</li>
+  <li>Sur l’iPhone ou l’iPad, ouvrez Belksiri Scan et connectez-vous à la carte en Bluetooth.</li>
+</ol>
+<p><strong>Ce qui est effacé :</strong> les réglages enregistrés sur la carte, dont son réseau Wi-Fi et son mot de passe. La fenêtre de confirmation le rappelle. « Verified » signifie que la carte a été relue et correspond à l’image ; la connexion depuis Belksiri Scan confirme ensuite que le firmware fonctionne.</p>
+
+<h2>Si la carte ne répond pas</h2>
+<p>Maintenez le bouton <strong>BOOT</strong>, appuyez puis relâchez <strong>RESET</strong>, relâchez <strong>BOOT</strong>, puis cliquez <strong>Try again</strong>. En cas d’erreur, <strong>Copy details</strong> copie un rapport à joindre à votre message à <a href="mailto:mboti.dev@gmail.com">mboti.dev@gmail.com</a>.</p>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="./">
+      <img src="../assets/icon.png" alt="" width="26" height="26">
+      <span>Belksiri <span class="accent">Scan</span></span>
+    </a>
+    <nav aria-label="Accueil">
+      <ul>
+        <li><a href="./">Accueil</a></li>
+        <li><a href="privacy.html">Politique de confidentialité</a></li>
+        <li><a href="terms.html">Conditions d’utilisation</a></li>
+        <li><a href="support.html">Assistance</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2026 Belksiri. Tous droits réservés.</p>
+  </div>
+</footer>
+
+</body>
+</html>
