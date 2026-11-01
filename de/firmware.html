@@ -70,26 +70,28 @@
 
 <h2>Stand dieser Version</h2>
 <ul class="note">
-  <li><strong>Vorabversion für macOS</strong> (Apple Silicon und Intel). Die Windows-Version ist noch nicht verfügbar.</li>
-  <li><strong>Noch nicht an einer echten Platine validiert</strong>: geprüft mit automatischen Tests an simulierten Platinen und durch Starten der Anwendung. Die USB-Installation ist dieselbe wie in Belksiri Scan auf dem Mac. Die Intel-Version wurde nur unter Rosetta auf einem Mac mit Apple Silicon gestartet: Auf einem Intel-Mac ist sie noch nicht getestet.</li>
-  <li><strong>Mit Developer ID signiert und von Apple notarisiert</strong>: macOS öffnet sie normal, nach der üblichen Bestätigung für eine geladene App.</li>
+  <li><strong>Vorabversion</strong> für Mac mit Apple silicon, Intel-Mac und Windows-x64-PC.</li>
+  <li><strong>Mac mit Apple silicon:</strong> mit Developer ID signiert und von Apple notarisiert. <strong>USB-Installation an einer echten Platine validiert</strong>: ein ESP32-C5 (4 MB, USB-Wandler CH340) wurde programmiert, Byte für Byte zurückgelesen, und die Firmware ist gestartet. Noch zu bestätigen: die Verbindung und der Scan aus Belksiri Scan auf iPhone oder iPad nach dieser Installation.</li>
+  <li><strong>Intel-Mac:</strong> mit Developer ID signiert und von Apple notarisiert. Nur unter Rosetta auf einem Mac mit Apple silicon gestartet: <strong>nicht auf einem Intel-Mac ausprobiert, keine USB-Installation getestet</strong>.</li>
+  <li><strong>Windows x64:</strong> <strong>nicht signiert</strong> (kein Authenticode-Zertifikat). Auf einem Windows-Rechner von GitHub Actions gebaut, an simulierten Platinen getestet und gestartet: <strong>nicht auf einem echten PC ausprobiert, keine USB-Installation getestet</strong>.</li>
+  <li><strong>Sprache des Programms:</strong> nur Englisch, unabhängig von der Sprache dieser Seite. Die unten genannten Bezeichnungen sind daher englisch, wie auf dem Bildschirm.</li>
 </ul>
 
 <h2>Herunterladen</h2>
 <div class="scroll">
-<table>
-  <tr><th>Datei</th><th>Für</th><th>SHA-256</th></tr>
-  <tr><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg</a></td><td>Mac mit Apple Silicon (M1 und neuer)</td><td><code>19a285dd8bef678c1ef29df1b6e49d09ffd0474421203469d2d129b217e4b88e</code></td></tr>
-  <tr><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg</a></td><td>Intel-Mac</td><td><code>081c041b33cae9f25a9b873dfbf065662bba6600107d3f26de09ee3242e56b67</code></td></tr>
+<table class="downloads">
+  <tr><th>Für</th><th>Datei / SHA-256</th></tr>
+  <tr><td>Mac mit Apple Silicon (M1 und neuer)</td><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg</a><br><code>19a285dd8bef678c1ef29df1b6e49d09ffd0474421203469d2d129b217e4b88e</code></td></tr>
+  <tr><td>Intel-Mac</td><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg</a><br><code>081c041b33cae9f25a9b873dfbf065662bba6600107d3f26de09ee3242e56b67</code></td></tr>
+  <tr><td>Windows-10/11-PC x64</td><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-windows-x64.zip">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-windows-x64.zip</a><br><code>af29150c6b2682bc0ef62f99a81a70b24bf649359f69624649b1cc0d1f6359b8</code></td></tr>
 </table>
 </div>
-<p>Windows 10/11: noch nicht verfügbar.</p>
 <p>Alle Angaben zu dieser Version und die Datei <code>SHA256SUMS.txt</code> finden Sie auf der <a href="https://github.com/mboti/belksiri-scan/releases/tag/firmware-installer-v1.0.0">Versionsseite</a>.</p>
-<p>Zum Prüfen einer heruntergeladenen Datei vergleichen Sie die Ausgabe von <code>shasum -a 256 &lt;Datei&gt;</code> (Terminal) mit der Prüfsumme oben.</p>
+<p>Zum Prüfen einer heruntergeladenen Datei vergleichen Sie ihre Prüfsumme mit der oben genannten: <code>shasum -a 256 &lt;Datei&gt;</code> im Terminal auf dem Mac, <code>Get-FileHash &lt;Datei&gt;</code> in PowerShell unter Windows.</p>
 
 <h2>Voraussetzungen</h2>
 <ul>
-  <li>macOS 12 oder neuer.</li>
+  <li>macOS 12 oder neuer, oder Windows 10/11 x64.</li>
   <li>Eine <strong>ESP32-C5</strong>-Platine mit mindestens <strong>4 MB</strong> Flash. Jeder andere Chip oder ein kleinerer oder unlesbarer Flash wird vor jedem Schreiben abgelehnt.</li>
   <li>Ein USB-<strong>Datenkabel</strong>: Viele Kabel laden nur.</li>
   <li>USB-Treiber: keiner für den nativen USB-Anschluss des ESP32-C5. Platinen mit CP210x- oder CH340-Wandler brauchen nur unter Windows einen Treiber des Chipherstellers.</li>
@@ -99,15 +101,21 @@
 <p>ESP Device Studio <strong>1.0.4</strong> für ESP32-C5 (ESP-IDF v5.5.4). SHA-256 des Abbilds: <code>83de9994a710dba224c7ccb0248bb4e2334af38ce3e32e818c5d0cba66a9a499</code>, vom Hilfsprogramm vor dem Schreiben geprüft. Enthalten ist das Programmierwerkzeug espflash 4.5.0 (Lizenzen MIT und Apache-2.0), unverändert.</p>
 
 <h2>Die Anwendung zum ersten Mal öffnen</h2>
+<p><strong>Mac</strong></p>
 <ol>
   <li>Öffnen Sie die <code>.dmg</code>-Datei und ziehen Sie <strong>Belksiri Firmware Installer</strong> in <strong>Programme</strong>.</li>
   <li>Öffnen Sie die Anwendung und bestätigen Sie: macOS fragt bei einer geladenen App einmal nach.</li>
+</ol>
+<p><strong>Windows</strong></p>
+<ol>
+  <li>Entpacken Sie die ZIP-Datei vollständig (portable Version, ohne Administratorrechte) und starten Sie dann <code>BelksiriFirmwareInstaller.exe</code>.</li>
+  <li>Da die Datei nicht signiert ist, zeigt SmartScreen beim ersten Start eine Warnung. Prüfen Sie die Prüfsumme und wählen Sie dann „Weitere Informationen“ und „Trotzdem ausführen“ nur für diese Anwendung.</li>
 </ol>
 
 <h2>Die Firmware installieren</h2>
 <ol>
   <li>Verbinden Sie die ESP32-C5-Platine mit einem USB-Datenkabel mit dem Computer.</li>
-  <li>Prüfen Sie die Zeile der Platine: <code>ESP32-C5 · 4 MB flash · Compatible</code>. Sind mehrere Platinen angeschlossen, wählen Sie eine aus.</li>
+  <li>Prüfen Sie die Zeile der Platine: <code>ESP32-C5 (rev v1.0) · 4 MB flash</code> <code>Compatible</code>. Sind mehrere Platinen angeschlossen, wählen Sie eine aus.</li>
   <li>Klicken Sie auf <strong>Install firmware</strong> und bestätigen Sie.</li>
   <li>Warten Sie auf <em>Firmware installed and verified</em>. Trennen Sie die Platine nicht und schließen Sie das Fenster nicht, solange der Vorgang läuft.</li>
   <li>Öffnen Sie auf dem iPhone oder iPad Belksiri Scan und verbinden Sie sich per Bluetooth mit der Platine.</li>

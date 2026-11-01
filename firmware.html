@@ -70,26 +70,28 @@
 
 <h2>State of this version</h2>
 <ul class="note">
-  <li><strong>Pre-release for macOS</strong> (Apple silicon and Intel). The Windows version is not available yet.</li>
-  <li><strong>Not yet validated on a real board</strong>: tested with automated tests on simulated boards and by starting the application. The USB installation engine is the one Belksiri Scan uses on Mac. The Intel version has only been started under Rosetta on an Apple silicon Mac: it has not been tested on an Intel Mac yet.</li>
-  <li><strong>Developer ID signed and notarised by Apple</strong>: macOS opens it normally, after the usual confirmation for a downloaded app.</li>
+  <li><strong>Pre-release</strong> for Apple silicon Mac, Intel Mac and Windows x64 PC.</li>
+  <li><strong>Apple silicon Mac:</strong> Developer ID signed and notarised by Apple. <strong>USB installation validated on a real board</strong>: an ESP32-C5 (4 MB, CH340 USB bridge) was flashed, read back byte for byte, and the firmware started. Still to confirm: the connection and scan from Belksiri Scan on iPhone or iPad after this installation.</li>
+  <li><strong>Intel Mac:</strong> Developer ID signed and notarised by Apple. Only started under Rosetta on an Apple silicon Mac: <strong>not tried on an Intel Mac, no USB installation tested</strong>.</li>
+  <li><strong>Windows x64:</strong> <strong>not signed</strong> (no Authenticode certificate). Built, tested on simulated boards and started on a GitHub Actions Windows machine: <strong>not tried on a real PC, no USB installation tested</strong>.</li>
+  <li><strong>Language of the utility:</strong> English only, whatever the language of this page. The labels quoted below are therefore in English, as on screen.</li>
 </ul>
 
 <h2>Download</h2>
 <div class="scroll">
-<table>
-  <tr><th>File</th><th>For</th><th>SHA-256</th></tr>
-  <tr><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg</a></td><td>Mac with Apple silicon (M1 and later)</td><td><code>19a285dd8bef678c1ef29df1b6e49d09ffd0474421203469d2d129b217e4b88e</code></td></tr>
-  <tr><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg</a></td><td>Intel Mac</td><td><code>081c041b33cae9f25a9b873dfbf065662bba6600107d3f26de09ee3242e56b67</code></td></tr>
+<table class="downloads">
+  <tr><th>For</th><th>File / SHA-256</th></tr>
+  <tr><td>Mac with Apple silicon (M1 and later)</td><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg</a><br><code>19a285dd8bef678c1ef29df1b6e49d09ffd0474421203469d2d129b217e4b88e</code></td></tr>
+  <tr><td>Intel Mac</td><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg</a><br><code>081c041b33cae9f25a9b873dfbf065662bba6600107d3f26de09ee3242e56b67</code></td></tr>
+  <tr><td>Windows 10/11 x64 PC</td><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-windows-x64.zip">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-windows-x64.zip</a><br><code>af29150c6b2682bc0ef62f99a81a70b24bf649359f69624649b1cc0d1f6359b8</code></td></tr>
 </table>
 </div>
-<p>Windows 10/11: not available yet.</p>
 <p>Everything about this version, and the <code>SHA256SUMS.txt</code> file, is on the <a href="https://github.com/mboti/belksiri-scan/releases/tag/firmware-installer-v1.0.0">release page</a>.</p>
-<p>To check a downloaded file, compare the output of <code>shasum -a 256 &lt;file&gt;</code> (Terminal) with the checksum above.</p>
+<p>To check a downloaded file, compare its checksum with the one above: <code>shasum -a 256 &lt;file&gt;</code> in Terminal on Mac, <code>Get-FileHash &lt;file&gt;</code> in PowerShell on Windows.</p>
 
 <h2>Requirements</h2>
 <ul>
-  <li>macOS 12 or later.</li>
+  <li>macOS 12 or later, or Windows 10/11 x64.</li>
   <li>An <strong>ESP32-C5</strong> board with at least <strong>4 MB</strong> of flash. Any other chip, or a smaller or unreadable flash, is refused before anything is written.</li>
   <li>A USB <strong>data</strong> cable: many cables only charge.</li>
   <li>USB driver: none for the ESP32-C5’s native USB port. Boards with a CP210x or CH340 bridge need a driver, from that chip’s maker, on Windows only.</li>
@@ -99,15 +101,21 @@
 <p>ESP Device Studio <strong>1.0.4</strong> for ESP32-C5 (ESP-IDF v5.5.4). SHA-256 of the image: <code>83de9994a710dba224c7ccb0248bb4e2334af38ce3e32e818c5d0cba66a9a499</code>, checked by the utility before writing. It bundles the espflash 4.5.0 flashing tool (MIT and Apache-2.0 licences), unmodified.</p>
 
 <h2>Opening the application the first time</h2>
+<p><strong>Mac</strong></p>
 <ol>
   <li>Open the <code>.dmg</code> file and drag <strong>Belksiri Firmware Installer</strong> to <strong>Applications</strong>.</li>
   <li>Open the application and confirm: macOS asks once for a downloaded app.</li>
+</ol>
+<p><strong>Windows</strong></p>
+<ol>
+  <li>Unzip the whole ZIP file (portable version, no administrator rights), then run <code>BelksiriFirmwareInstaller.exe</code>.</li>
+  <li>As the file is not signed, SmartScreen shows a warning on first launch. Check the checksum, then choose “More info” and “Run anyway” for this application only.</li>
 </ol>
 
 <h2>Installing the firmware</h2>
 <ol>
   <li>Connect the ESP32-C5 board to the computer with a USB data cable.</li>
-  <li>Check the board line: <code>ESP32-C5 · 4 MB flash · Compatible</code>. If several boards are connected, choose one.</li>
+  <li>Check the board line: <code>ESP32-C5 (rev v1.0) · 4 MB flash</code> <code>Compatible</code>. If several boards are connected, choose one.</li>
   <li>Click <strong>Install firmware</strong> and confirm.</li>
   <li>Wait for <em>Firmware installed and verified</em>. Do not unplug the board or close the window while it runs.</li>
   <li>On the iPhone or iPad, open Belksiri Scan and connect to the board over Bluetooth.</li>

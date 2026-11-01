@@ -353,6 +353,7 @@ code {
   background: color-mix(in srgb, var(--rule) 45%, transparent);
   padding: 0.1em 0.35em;
   border-radius: 3px;
+  overflow-wrap: anywhere;
 }
 
 .note {
@@ -472,3 +473,11 @@ footer p { margin: 0; }
 
 /* Arabic reads right to left; lists indent from the right. */
 [dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 1.35rem; }
+
+/* Firmware downloads: the platform stays readable, a long file name and its
+   checksum wrap instead of being cut off. */
+.downloads th:first-child, .downloads td:first-child { width: 28%; }
+.downloads a { overflow-wrap: anywhere; }
+.downloads code { display: inline-block; margin-top: 0.35rem; white-space: normal; }
+/* Commands and checksums read left to right, also inside Arabic text. */
+[dir="rtl"] code { direction: ltr; unicode-bidi: isolate; }

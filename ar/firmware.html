@@ -70,26 +70,28 @@
 
 <h2>حالة هذا الإصدار</h2>
 <ul class="note">
-  <li><strong>إصدار تمهيدي لنظام macOS</strong> (Apple silicon وIntel). إصدار Windows غير متاح بعد.</li>
-  <li><strong>لم يُتحقَّق منه بعد على لوحة حقيقية</strong>: اختُبر باختبارات آلية على لوحات محاكاة وبتشغيل التطبيق. محرك التثبيت عبر USB هو نفسه المستخدم في Belksiri Scan على Mac. لم يُشغَّل إصدار Intel إلا عبر Rosetta على Mac بمعالج Apple silicon: لم يُختبر بعد على Mac بمعالج Intel.</li>
-  <li><strong>موقَّع بشهادة Developer ID وموثَّق من Apple</strong>: يفتحه macOS بشكل عادي بعد التأكيد المعتاد لتطبيق منزَّل.</li>
+  <li><strong>إصدار تجريبي</strong> لأجهزة Mac بمعالج Apple silicon وMac بمعالج Intel وحواسيب Windows x64.</li>
+  <li><strong>Mac بمعالج Apple silicon:</strong> موقَّع بشهادة Developer ID وموثَّق من Apple. <strong>تم التحقق من التثبيت عبر USB على لوحة حقيقية</strong>: بُرمجت لوحة ESP32-C5 (4 ميغابايت، محوّل USB من نوع CH340)، وأُعيدت قراءتها بايتًا ببايت، وبدأ تشغيل البرنامج الثابت. يبقى تأكيد: الاتصال والمسح من Belksiri Scan على iPhone أو iPad بعد هذا التثبيت.</li>
+  <li><strong>Mac بمعالج Intel:</strong> موقَّع بشهادة Developer ID وموثَّق من Apple. لم يُشغَّل إلا عبر Rosetta على Mac بمعالج Apple silicon: <strong>لم يُجرَّب على Mac بمعالج Intel، ولم يُختبر التثبيت عبر USB</strong>.</li>
+  <li><strong>Windows x64:</strong> <strong>غير موقَّع</strong> (لا توجد شهادة Authenticode). جُمّع واختُبر على لوحات محاكاة وشُغّل على جهاز Windows من GitHub Actions: <strong>لم يُجرَّب على حاسوب حقيقي، ولم يُختبر التثبيت عبر USB</strong>.</li>
+  <li><strong>لغة الأداة:</strong> الإنجليزية فقط، أيًّا كانت لغة هذه الصفحة. لذلك تَرِد التسميات المذكورة أدناه بالإنجليزية كما تظهر على الشاشة.</li>
 </ul>
 
 <h2>التنزيل</h2>
 <div class="scroll">
-<table>
-  <tr><th>الملف</th><th>لـ</th><th>SHA-256</th></tr>
-  <tr><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg</a></td><td>Mac بمعالج Apple silicon (M1 وما بعده)</td><td><code>19a285dd8bef678c1ef29df1b6e49d09ffd0474421203469d2d129b217e4b88e</code></td></tr>
-  <tr><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg</a></td><td>Mac بمعالج Intel</td><td><code>081c041b33cae9f25a9b873dfbf065662bba6600107d3f26de09ee3242e56b67</code></td></tr>
+<table class="downloads">
+  <tr><th>لـ</th><th>الملف / SHA-256</th></tr>
+  <tr><td>Mac بمعالج Apple silicon (M1 وما بعده)</td><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-arm64.dmg</a><br><code>19a285dd8bef678c1ef29df1b6e49d09ffd0474421203469d2d129b217e4b88e</code></td></tr>
+  <tr><td>Mac بمعالج Intel</td><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-macos-x64.dmg</a><br><code>081c041b33cae9f25a9b873dfbf065662bba6600107d3f26de09ee3242e56b67</code></td></tr>
+  <tr><td>حاسوب Windows 10/11 x64</td><td><a href="https://github.com/mboti/belksiri-scan/releases/download/firmware-installer-v1.0.0/Belksiri-Firmware-Installer-1.0.0-fw1.0.4-windows-x64.zip">Belksiri-Firmware-Installer-1.0.0-fw1.0.4-windows-x64.zip</a><br><code>af29150c6b2682bc0ef62f99a81a70b24bf649359f69624649b1cc0d1f6359b8</code></td></tr>
 </table>
 </div>
-<p>Windows 10/11: غير متاح بعد.</p>
 <p>كل معلومات هذا الإصدار، والملف <code>SHA256SUMS.txt</code>، موجودة في <a href="https://github.com/mboti/belksiri-scan/releases/tag/firmware-installer-v1.0.0">صفحة الإصدار</a>.</p>
-<p>للتحقق من ملف منزَّل، قارن ناتج الأمر <code>shasum -a 256 &lt;file&gt;</code> (في Terminal) بالبصمة أعلاه.</p>
+<p>للتحقق من ملف منزَّل، قارن بصمته بالبصمة أعلاه: <code>shasum -a 256 &lt;file&gt;</code> في Terminal على Mac، و<code>Get-FileHash &lt;file&gt;</code> في PowerShell على Windows.</p>
 
 <h2>المتطلبات</h2>
 <ul>
-  <li>macOS 12 أو أحدث.</li>
+  <li>macOS 12 أو أحدث، أو Windows 10/11 x64.</li>
   <li>لوحة <strong>ESP32-C5</strong> بذاكرة فلاش لا تقل عن <strong>4 ميغابايت</strong>. أي شريحة أخرى، أو ذاكرة فلاش أصغر أو تتعذر قراءتها، تُرفض قبل أي كتابة.</li>
   <li>كابل USB <strong>لنقل البيانات</strong>: كثير من الكابلات للشحن فقط.</li>
   <li>برنامج تشغيل USB: لا حاجة إليه لمنفذ USB المدمج في ESP32-C5. اللوحات المزودة بمحوّل CP210x أو CH340 تحتاج إلى برنامج تشغيل من صانع تلك الشريحة على Windows فقط.</li>
@@ -99,15 +101,21 @@
 <p>ESP Device Studio <strong>1.0.4</strong> للوحة ESP32-C5 (ESP-IDF v5.5.4). بصمة SHA-256 للصورة: <code>83de9994a710dba224c7ccb0248bb4e2334af38ce3e32e818c5d0cba66a9a499</code>، وتتحقق منها الأداة قبل الكتابة. تتضمن أداة البرمجة espflash 4.5.0 (رخصتا MIT وApache-2.0) دون تعديل.</p>
 
 <h2>فتح التطبيق للمرة الأولى</h2>
+<p><strong>Mac</strong></p>
 <ol>
   <li>افتح ملف <code>.dmg</code> واسحب <strong>Belksiri Firmware Installer</strong> إلى <strong>التطبيقات</strong>.</li>
   <li>افتح التطبيق وأكّد فتحه: يطلب macOS ذلك مرة واحدة للتطبيقات المنزَّلة.</li>
+</ol>
+<p><strong>Windows</strong></p>
+<ol>
+  <li>فُكّ ضغط ملف ZIP بالكامل (إصدار محمول، دون صلاحيات المسؤول)، ثم شغّل <code>BelksiriFirmwareInstaller.exe</code>.</li>
+  <li>بما أن الملف غير موقَّع، يعرض SmartScreen تحذيرًا عند التشغيل الأول. تحقّق من البصمة، ثم اختر «مزيد من المعلومات» و«التشغيل على أي حال» لهذا التطبيق وحده.</li>
 </ol>
 
 <h2>تثبيت البرنامج الثابت</h2>
 <ol>
   <li>وصّل لوحة ESP32-C5 بالحاسوب بكابل USB لنقل البيانات.</li>
-  <li>تحقق من سطر اللوحة: <code>ESP32-C5 · 4 MB flash · Compatible</code>. إذا كانت عدة لوحات موصولة، فاختر واحدة.</li>
+  <li>تحقق من سطر اللوحة: <code>ESP32-C5 (rev v1.0) · 4 MB flash</code> <code>Compatible</code>. إذا كانت عدة لوحات موصولة، فاختر واحدة.</li>
   <li>انقر <strong>Install firmware</strong> ثم أكّد.</li>
   <li>انتظر ظهور <em>Firmware installed and verified</em>. لا تفصل اللوحة ولا تغلق النافذة أثناء العملية.</li>
   <li>على iPhone أو iPad، افتح Belksiri Scan واتصل باللوحة عبر Bluetooth.</li>
