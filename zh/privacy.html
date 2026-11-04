@@ -67,8 +67,8 @@
 <h1>隐私政策</h1>
 
 <div class="meta">
-  <div><strong>最后更新：</strong>2026年10月29日</div>
-  <div><strong>适用于：</strong>iPhone、iPad 和 Mac 版 Belksiri Scan</div>
+  <div><strong>最后更新：</strong>2026年11月4日</div>
+  <div><strong>适用于：</strong>iPhone、iPad、Mac 和 Windows 版 Belksiri Scan</div>
   <div><strong>发布者：</strong>Belksiri，法国的一名独立开发者 &mdash; 见第 J 节</div>
   <div><strong>联系方式：</strong><a href="mailto:mboti.dev@gmail.com">mboti.dev@gmail.com</a></div>
 </div>
@@ -76,6 +76,7 @@
 <h2>简而言之</h2>
 <p>Belksiri Scan 用于测量和诊断 Wi-Fi 网络。它<strong>没有账户、没有广告、没有分析、没有跟踪，也不发送崩溃报告</strong>。Belksiri 没有为它运行任何服务器，<strong>也不会收到您的任何数据</strong>：您的项目、测量结果和设置都保留在您的设备上，除非您自己导出或共享它们。</p>
 <p>某些功能需要与互联网通信才能对其进行测量。当您使用这些功能时，您的设备会连接到由其他公司运营的公共服务（第 D 节）。这些连接本身就是测试：除了任何互联网连接都会携带的信息（例如您的 IP 地址）之外，它们不携带任何关于您的信息。</p>
+<p>标有“iPhone、iPad 和 Mac”或“Windows”的段落仅适用于这些设备；本政策的其余内容适用于所有设备。</p>
 
 <h2>A. 保留在您设备上的内容</h2>
 <p>本应用将以下内容保存在您设备上其自身的存储空间中。Belksiri 没有其中任何内容的副本。</p>
@@ -88,8 +89,10 @@
 </ul>
 <p>图像会保留其文件所包含的一切内容。从照片图库中选择的照片可能带有元数据，例如拍摄地点；本应用按原样存储该图像，并在您导出的项目文件中按原样包含该图像。</p>
 <p>删除本应用即会删除这些数据。由 iCloud 或您的电脑制作的设备备份，属于您与该服务之间的事务。</p>
+<p><strong>Windows。</strong>本节关于钥匙串、删除应用和 iCloud 的内容针对 iPhone、iPad 和 Mac。在 Windows 电脑上，您要求记住的 Wi-Fi 密码以加密形式保存在应用的文件中，密钥保存在此电脑上您的 Windows 用户账户的 Windows 凭据管理器中；应用不会同步这些密码。这种保护属于您的 Windows 用户账户：与钥匙串不同，它并不将密码限定于 Belksiri Scan，在您的账户下运行的其他程序也可能访问它们。设置 &rsaquo; 清除已存储的偏好设置可将其删除；如需清除，请在卸载前使用。您导出的文件仍保留在您保存的位置。 卸载后，你的项目和设置可能仍然保留：它们位于你的用户帐户的 <code>%APPDATA%\Belksiri\Belksiri Scan</code> 文件夹中，你可以自行删除。</p>
 
 <h2>B. 权限</h2>
+<p><strong>iPhone、iPad 和 Mac。</strong></p>
 <ul>
   <li><strong>蓝牙</strong>：用于查找您的 ESP32-C5 开发板并与之通信。</li>
   <li><strong>位置（仅限 Mac）</strong>：macOS 要求应用先获得此权限，才能列出附近的 Wi-Fi 网络或读取 Mac 所连接网络的名称。Belksiri Scan <strong>从不请求、读取或存储您的位置</strong>。在 iPhone 和 iPad 上，本应用不会请求位置权限。</li>
@@ -99,10 +102,20 @@
   <li><strong>USB 串口（仅限 Mac）</strong>：用于通过开发板的 USB 线缆，使用应用内置的烧录工具为其安装固件。该工具仅在您启动的安装过程中、在应用的沙盒内运行，并在应用退出时停止。</li>
 </ul>
 <p>您可以在设备设置中拒绝或撤销其中任何一项权限；只有需要该权限的功能会停止工作。</p>
+<p><strong>Windows。</strong></p>
+<ul>
+  <li><strong>位置</strong>：Windows 可能要求您先同意位置访问（设置 &rsaquo; 隐私和安全性 &rsaquo; 位置），应用才能列出附近的 Wi-Fi 网络或读取电脑所连接的接入点。此时系统可能显示自己的提示，并指示应用正在使用位置。Microsoft Store 软件包因此声明了此功能。Belksiri Scan <strong>不调用 Windows 位置服务，也不读取或存储您的位置</strong>。</li>
+  <li><strong>蓝牙</strong>：仅用于查找可选的 ESP32-C5 开发板并与之通信。</li>
+  <li><strong>网络</strong>：访问互联网和局域网，用于 D 节所述的测试，包括到路由器的往返测量。</li>
+  <li><strong>文件和文件夹</strong>：仅限您选择的文件和文件夹，用于打开、保存或导出项目或报告。平面图是您选择的图像文件；应用在 Windows 上不使用相机。</li>
+  <li><strong>USB 串口</strong>：用于通过开发板的 USB 线缆，使用应用内置的烧录工具为其安装固件。 它仅在检测开发板以及你启动安装时运行。</li>
+</ul>
+<p>如果您拒绝位置访问，电脑的 Wi-Fi 扫描及依赖它的功能将停止工作；Ping 不需要此权限。</p>
 
 <h2>C. 您的 ESP32-C5 开发板</h2>
 <p>开发板是您自己的设备。本应用通过低功耗蓝牙（Bluetooth Low Energy）或 USB 向其发送：命令（扫描、测量、重启）、您要求其加入的 Wi-Fi 网络的名称和密码，以及固件更新。当前固件的蓝牙连接<strong>未加密</strong>，且开发板<strong>未经加密</strong>存储网络名称和密码：蓝牙范围内任何拥有合适工具的人都可能读取这些信息或控制开发板。请在您可以接受这一点的网络和场所中使用它。</p>
 <p>开发板仅为运行您启动的测试（例如对您选择的地址执行 ping）而连接互联网。</p>
+<p><strong>Windows。</strong>在 Windows 电脑上，开发板为可选，因为电脑本身即可扫描 Wi-Fi。如果您使用开发板，本节内容同样适用。</p>
 
 <h2>D. 网络测试及其联系的服务</h2>
 <p>这些测试由您启动。它们不发送任何个人信息、任何标识符或任何测量结果：只发送测试所需的流量。这些服务会收到您的公网 IP 地址以及任何连接都具有的技术数据，并根据其自身的政策进行处理。</p>
@@ -113,7 +126,8 @@
 <p>这些服务的政策：<a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a>、<a href="https://policies.google.com/privacy">Google</a>、<a href="https://quad9.net/privacy/policy/">Quad9</a>。Belksiri 不会收到任何测试的结果。</p>
 
 <h2>E. 购买 Belksiri Scan Pro</h2>
-<p>购买完全在 Apple 的 App Store 内进行。Belksiri 永远看不到您的付款信息、您的姓名或您的 Apple 账户。为解锁 Pro，本应用会在您的设备上向 Apple 的 StoreKit 查询此 Apple 账户是否拥有 Belksiri Scan Pro，并收到一条由 Apple 签名的交易记录（产品、交易编号、日期）。该记录保留在您的设备上，不会发送给 Belksiri。Apple 根据其自身的<a href="https://www.apple.com/legal/privacy/">隐私政策</a>处理您的购买。</p>
+<p><strong>iPhone、iPad 和 Mac。</strong>购买完全在 Apple 的 App Store 内进行。Belksiri 永远看不到您的付款信息、您的姓名或您的 Apple 账户。为解锁 Pro，本应用会在您的设备上向 Apple 的 StoreKit 查询此 Apple 账户是否拥有 Belksiri Scan Pro，并收到一条由 Apple 签名的交易记录（产品、交易编号、日期）。该记录保留在您的设备上，不会发送给 Belksiri。Apple 根据其自身的<a href="https://www.apple.com/legal/privacy/">隐私政策</a>处理您的购买。</p>
+<p><strong>Windows。</strong>购买完全在 Microsoft Store 内进行，形式为应用的加载项。Belksiri 永远看不到您的付款信息、您的姓名或您的 Microsoft 账户。为解锁 Pro，本应用会在您的电脑上向 Microsoft Store 查询 Belksiri Scan Pro 加载项的许可证是否有效。这些信息都不会发送给 Belksiri。Microsoft 依据其自身的<a href="https://privacy.microsoft.com/privacystatement">隐私声明</a>处理您的购买。</p>
 
 <h2>F. 导出与共享</h2>
 <p>当您导出或共享报告或项目时，文件会去往您选择的位置：某个文件夹、“文件”App、iCloud 云盘、电子邮件或其他应用。报告和项目包含网络名称、接入点标识符和测量结果。此后它们会发生什么，取决于您将其发送到了何处。</p>

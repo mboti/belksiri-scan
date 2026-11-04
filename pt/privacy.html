@@ -67,8 +67,8 @@
 <h1>Política de Privacidade</h1>
 
 <div class="meta">
-  <div><strong>Última atualização:</strong> 29 de outubro de 2026</div>
-  <div><strong>Aplica-se a:</strong> Belksiri Scan para iPhone, iPad e Mac</div>
+  <div><strong>Última atualização:</strong> 4 de novembro de 2026</div>
+  <div><strong>Aplica-se a:</strong> Belksiri Scan para iPhone, iPad, Mac e Windows</div>
   <div><strong>Publicado por:</strong> Belksiri, um programador independente em França &mdash; ver secção J</div>
   <div><strong>Contacto:</strong> <a href="mailto:mboti.dev@gmail.com">mboti.dev@gmail.com</a></div>
 </div>
@@ -76,6 +76,7 @@
 <h2>Em resumo</h2>
 <p>O Belksiri Scan mede e diagnostica redes Wi-Fi. Não tem <strong>conta, publicidade, análise de utilização, rastreio nem envio de relatórios de falhas</strong>. A Belksiri não opera nenhum servidor para a aplicação e <strong>não recebe nenhum dos seus dados</strong>: os seus projetos, medições e definições permanecem no seu dispositivo, salvo se for o próprio utilizador a exportá-los ou a partilhá-los.</p>
 <p>Algumas funções precisam de comunicar com a Internet para a medir. Quando as utiliza, o seu dispositivo liga-se a serviços públicos operados por outras empresas (secção D). Essas ligações são o próprio teste: não transportam nenhuma informação sobre si além da que qualquer ligação à Internet transporta, como o seu endereço IP.</p>
+<p>As passagens assinaladas com «iPhone, iPad e Mac» ou «Windows» valem apenas para esses dispositivos; o resto desta política aplica-se a todos.</p>
 
 <h2>A. O que fica no seu dispositivo</h2>
 <p>A aplicação guarda o seguinte no seu próprio armazenamento, no seu dispositivo. A Belksiri não tem cópia de nada disto.</p>
@@ -88,8 +89,10 @@
 </ul>
 <p>Uma imagem conserva tudo o que o seu ficheiro contém. Uma fotografia escolhida na sua fototeca pode conter metadados, como o local onde foi tirada; a aplicação guarda a imagem tal como está e inclui-a tal como está num ficheiro de projeto que exporte.</p>
 <p>Eliminar a aplicação elimina estes dados. Uma cópia de segurança do seu dispositivo feita pelo iCloud ou pelo seu computador é uma questão entre si e esse serviço.</p>
+<p><strong>Windows.</strong> O que esta secção diz sobre o Porta-chaves, a eliminação da aplicação e o iCloud diz respeito ao iPhone, iPad e Mac. Num PC Windows, as palavras-passe Wi-Fi que pede para memorizar são guardadas encriptadas num ficheiro da aplicação, com uma chave guardada no Gestor de Credenciais do Windows para a sua conta de utilizador do Windows neste PC; a aplicação não as sincroniza. Esta proteção é a da sua conta de utilizador do Windows: ao contrário do Porta-chaves, não as reserva ao Belksiri Scan, e outro programa executado com a sua conta poderia aceder-lhes. Definições &rsaquo; Limpar as preferências guardadas elimina-as; utilize esta opção antes de desinstalar se as quiser remover. Os ficheiros que exportou ficam onde os guardou. A desinstalação pode deixar os seus projetos e definições no lugar: estão na pasta <code>%APPDATA%\Belksiri\Belksiri Scan</code> da sua conta de utilizador, que pode eliminar manualmente.</p>
 
 <h2>B. Permissões</h2>
+<p><strong>iPhone, iPad e Mac.</strong></p>
 <ul>
   <li><strong>Bluetooth</strong>: para encontrar a sua placa ESP32-C5 e comunicar com ela.</li>
   <li><strong>Localização (apenas no Mac)</strong>: o macOS exige-a antes de uma aplicação poder listar as redes Wi-Fi próximas ou ler o nome da rede a que o Mac está ligado. O Belksiri Scan <strong>nunca pede, lê nem guarda a sua posição</strong>. No iPhone e no iPad, a aplicação não pede a localização.</li>
@@ -99,10 +102,20 @@
   <li><strong>Porta série USB (apenas no Mac)</strong>: para instalar o firmware na sua placa através do respetivo cabo USB, com a ferramenta de gravação incluída na aplicação. Esta só é executada durante uma instalação que inicie, dentro da sandbox da aplicação, e termina quando a aplicação é encerrada.</li>
 </ul>
 <p>Pode recusar ou retirar qualquer uma delas nas definições do seu dispositivo; apenas a função que dela precisa deixa de funcionar.</p>
+<p><strong>Windows.</strong></p>
+<ul>
+  <li><strong>Localização</strong>: o Windows pode exigir o seu consentimento de localização (Definições &rsaquo; Privacidade e segurança &rsaquo; Localização) antes de uma aplicação poder listar as redes Wi-Fi próximas ou ler o ponto de acesso a que o PC está ligado. Pode então apresentar o seu próprio pedido e indicar que a aplicação está a utilizar a localização. O pacote da Microsoft Store declara esta capacidade por esse motivo. O Belksiri Scan <strong>não chama o serviço de localização do Windows, e não lê nem guarda a sua posição</strong>.</li>
+  <li><strong>Bluetooth</strong>: apenas para encontrar uma placa ESP32-C5 opcional e comunicar com ela.</li>
+  <li><strong>Rede</strong>: acesso à Internet e à rede local, para os testes da secção D, incluindo o tempo de ida e volta até ao seu router.</li>
+  <li><strong>Ficheiros e pastas</strong>: apenas os que escolher, para abrir, guardar ou exportar um projeto ou um relatório. Uma planta é um ficheiro de imagem que escolhe; a aplicação não utiliza a câmara no Windows.</li>
+  <li><strong>Porta série USB</strong>: para instalar o firmware na sua placa através do respetivo cabo USB, com a ferramenta de gravação incluída na aplicação. Só é executada para detetar a placa e durante uma instalação iniciada por si.</li>
+</ul>
+<p>Se recusar o consentimento de localização, o scan Wi-Fi pelo PC, e o que dele depende, deixa de funcionar; o Ping não precisa dele.</p>
 
 <h2>C. A sua placa ESP32-C5</h2>
 <p>A placa é um dispositivo seu. A aplicação envia-lhe, por Bluetooth Low Energy ou USB: comandos (scan, medição, reinício), o nome e a palavra-passe da rede Wi-Fi a que lhe pede que se ligue, e atualizações de firmware. A ligação Bluetooth do firmware atual <strong>não é encriptada</strong>, e a placa guarda o nome e a palavra-passe da rede <strong>sem encriptação</strong>: qualquer pessoa ao alcance do Bluetooth e com as ferramentas adequadas poderia lê-la ou controlá-la. Utilize-a em redes e em locais onde isso lhe seja aceitável.</p>
 <p>A placa liga-se à Internet apenas para executar os testes que inicia (por exemplo, um ping para um endereço que escolhe).</p>
+<p><strong>Windows.</strong> Num PC Windows a placa é opcional, porque o próprio PC faz o scan do Wi-Fi. Se utilizar uma, esta secção aplica-se-lhe.</p>
 
 <h2>D. Testes de rede e os serviços que contactam</h2>
 <p>Estes testes são iniciados por si. Não enviam nenhuma informação pessoal, nenhum identificador nem nenhum resultado de medição: apenas o tráfego de que o teste necessita. Os serviços recebem o seu endereço IP público e os dados técnicos de qualquer ligação, e tratam-nos segundo as suas próprias políticas.</p>
@@ -113,7 +126,8 @@
 <p>Políticas destes serviços: <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a>, <a href="https://policies.google.com/privacy">Google</a>, <a href="https://quad9.net/privacy/policy/">Quad9</a>. A Belksiri não recebe os resultados de nenhum teste.</p>
 
 <h2>E. Comprar o Belksiri Scan Pro</h2>
-<p>A compra é feita inteiramente na App Store da Apple. A Belksiri nunca vê os seus dados de pagamento, o seu nome nem a sua Conta Apple. Para desbloquear o Pro, a aplicação pergunta ao StoreKit da Apple, no seu dispositivo, se esta Conta Apple possui o Belksiri Scan Pro, e recebe uma transação assinada pela Apple (produto, número da transação, data). Esse registo fica no seu dispositivo; não é enviado à Belksiri. A Apple trata a sua compra segundo a sua própria <a href="https://www.apple.com/legal/privacy/">política de privacidade</a>.</p>
+<p><strong>iPhone, iPad e Mac.</strong> A compra é feita inteiramente na App Store da Apple. A Belksiri nunca vê os seus dados de pagamento, o seu nome nem a sua Conta Apple. Para desbloquear o Pro, a aplicação pergunta ao StoreKit da Apple, no seu dispositivo, se esta Conta Apple possui o Belksiri Scan Pro, e recebe uma transação assinada pela Apple (produto, número da transação, data). Esse registo fica no seu dispositivo; não é enviado à Belksiri. A Apple trata a sua compra segundo a sua própria <a href="https://www.apple.com/legal/privacy/">política de privacidade</a>.</p>
+<p><strong>Windows.</strong> A compra é feita inteiramente na Microsoft Store, como suplemento da aplicação. A Belksiri nunca vê os seus dados de pagamento, o seu nome nem a sua conta Microsoft. Para desbloquear o Pro, a aplicação pergunta à Microsoft Store, no seu PC, se a licença do suplemento Belksiri Scan Pro está ativa. Nada disto é enviado à Belksiri. A Microsoft trata a sua compra segundo a sua própria <a href="https://privacy.microsoft.com/privacystatement">declaração de privacidade</a>.</p>
 
 <h2>F. Exportações e partilha</h2>
 <p>Quando exporta ou partilha um relatório ou um projeto, o ficheiro vai para onde escolher: uma pasta, a app Ficheiros, o iCloud Drive, um e-mail, outra aplicação. Os relatórios e os projetos contêm nomes de rede, identificadores de pontos de acesso e medições. O que lhes acontece depois depende do destino para onde os enviou.</p>
