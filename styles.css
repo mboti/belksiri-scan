@@ -262,6 +262,9 @@ a:focus-visible,
   margin: 0;
 }
 
+/* Tutorials: the guide, then the videos, one row each. */
+.actions + .actions { margin-top: 0.75rem; }
+
 .button {
   display: inline-block;
   padding: 0.7rem 1.3rem;
