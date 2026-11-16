@@ -3,12 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Preparare la scheda ESP32-C5 — Belksiri Scan</title>
-<meta name="description" content="Belksiri Scan — Preparare la scheda ESP32-C5">
+<title>Preparare la scheda ESP32-C5 — WiFi Analyzer Diag</title>
+<meta name="description" content="WiFi Analyzer Diag — Preparare la scheda ESP32-C5">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="Belksiri Scan">
-<meta property="og:title" content="Preparare la scheda ESP32-C5 — Belksiri Scan">
+<meta property="og:site_name" content="WiFi Analyzer Diag">
+<meta property="og:title" content="Preparare la scheda ESP32-C5 — WiFi Analyzer Diag">
 <meta property="og:url" content="https://mboti.github.io/belksiri-scan/it/firmware.html">
+<meta property="og:description" content="WiFi Analyzer Diag — Preparare la scheda ESP32-C5">
+<meta property="og:image" content="https://mboti.github.io/belksiri-scan/assets/icon-512.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="WiFi Analyzer Diag">
+<meta name="twitter:card" content="summary">
 <link rel="canonical" href="https://mboti.github.io/belksiri-scan/it/firmware.html">
 <link rel="alternate" hreflang="en" href="https://mboti.github.io/belksiri-scan/firmware.html">
 <link rel="alternate" hreflang="fr" href="https://mboti.github.io/belksiri-scan/fr/firmware.html">
@@ -32,9 +38,9 @@
   <div class="wrap">
     <a class="brand" href="./">
       <img src="../assets/icon.png" alt="" width="26" height="26">
-      <span>Belksiri <span class="accent">Scan</span></span>
+      <span>WiFi Analyzer <span class="accent">Diag</span></span>
     </a>
-    <nav aria-label="Belksiri Scan">
+    <nav aria-label="WiFi Analyzer Diag">
       <ul>
         <li><a href="./#features">Funzioni</a></li>
         <li><a href="./#platforms">Piattaforme</a></li>
@@ -67,12 +73,12 @@
 
 <h1>Preparare la scheda ESP32-C5</h1>
 
-<p class="lead">Su iPhone e iPad, Belksiri Scan misura con una scheda ESP32-C5. Per installarne il firmware, colleghi la scheda via USB a un computer e usi <strong>Belksiri Firmware Installer</strong>, un’utilità gratuita e autonoma: su quel computer non servono Belksiri Scan, un account, una connessione a Internet né strumenti di sviluppo.</p>
+<p class="lead">Su iPhone e iPad, WiFi Analyzer Diag misura con una scheda ESP32-C5. Per installarne il firmware, colleghi la scheda via USB a un computer e usi <strong>Belksiri Firmware Installer</strong>, un’utilità gratuita e autonoma: su quel computer non servono WiFi Analyzer Diag, un account, una connessione a Internet né strumenti di sviluppo.</p>
 
 <h2>Stato di questa versione</h2>
 <ul class="note">
   <li><strong>Versione preliminare</strong> per Mac Apple silicon, Mac Intel e PC Windows x64.</li>
-  <li><strong>Mac Apple silicon:</strong> firmata con Developer ID e notarizzata da Apple. <strong>Installazione USB convalidata su una scheda reale</strong>: una ESP32-C5 (4 MB, convertitore USB CH340) è stata programmata, riletta byte per byte, e il firmware si è avviato. Da confermare: la connessione e la scansione da Belksiri Scan su iPhone o iPad dopo questa installazione.</li>
+  <li><strong>Mac Apple silicon:</strong> firmata con Developer ID e notarizzata da Apple. <strong>Installazione USB convalidata su una scheda reale</strong>: una ESP32-C5 (4 MB, convertitore USB CH340) è stata programmata, riletta byte per byte, e il firmware si è avviato. Da confermare: la connessione e la scansione da WiFi Analyzer Diag su iPhone o iPad dopo questa installazione.</li>
   <li><strong>Mac Intel:</strong> firmata con Developer ID e notarizzata da Apple. Avviata solo con Rosetta su un Mac Apple silicon: <strong>nessuna prova su un Mac Intel, nessuna installazione USB provata</strong>.</li>
   <li><strong>Windows x64:</strong> <strong>non firmata</strong> (nessun certificato Authenticode). Compilata, provata su schede simulate e avviata su una macchina Windows di GitHub Actions: <strong>nessuna prova su un PC reale, nessuna installazione USB provata</strong>.</li>
   <li><strong>Lingua dell’utilità:</strong> solo inglese, qualunque sia la lingua di questa pagina. Le etichette citate qui sotto sono quindi in inglese, come sullo schermo.</li>
@@ -119,9 +125,9 @@
   <li>Controlli la riga della scheda: <code>ESP32-C5 (rev v1.0) · 4 MB flash</code> <code>Compatible</code>. Se sono collegate più schede, ne scelga una.</li>
   <li>Faccia clic su <strong>Install firmware</strong> e confermi.</li>
   <li>Attenda <em>Firmware installed and verified</em>. Non scolleghi la scheda e non chiuda la finestra durante l’operazione.</li>
-  <li>Sull’iPhone o sull’iPad, apra Belksiri Scan e si colleghi alla scheda via Bluetooth.</li>
+  <li>Sull’iPhone o sull’iPad, apra WiFi Analyzer Diag e si colleghi alla scheda via Bluetooth.</li>
 </ol>
-<p><strong>Cosa viene cancellato:</strong> le impostazioni salvate sulla scheda, compresi la rete Wi-Fi e la relativa password. La finestra di conferma lo ricorda. «Verified» significa che la scheda è stata riletta e corrisponde all’immagine; la connessione da Belksiri Scan conferma poi che il firmware funziona.</p>
+<p><strong>Cosa viene cancellato:</strong> le impostazioni salvate sulla scheda, compresi la rete Wi-Fi e la relativa password. La finestra di conferma lo ricorda. «Verified» significa che la scheda è stata riletta e corrisponde all’immagine; la connessione da WiFi Analyzer Diag conferma poi che il firmware funziona.</p>
 
 <h2>Se la scheda non risponde</h2>
 <p>Tenga premuto <strong>BOOT</strong>, prema e rilasci <strong>RESET</strong>, rilasci <strong>BOOT</strong>, quindi faccia clic su <strong>Try again</strong>. In caso di errore, <strong>Copy details</strong> copia un rapporto da allegare al suo messaggio a <a href="mailto:mboti.dev@gmail.com">mboti.dev@gmail.com</a>.</p>
@@ -132,7 +138,7 @@
   <div class="wrap">
     <a class="brand" href="./">
       <img src="../assets/icon.png" alt="" width="26" height="26">
-      <span>Belksiri <span class="accent">Scan</span></span>
+      <span>WiFi Analyzer <span class="accent">Diag</span></span>
     </a>
     <nav aria-label="Home">
       <ul>

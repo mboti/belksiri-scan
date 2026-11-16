@@ -3,12 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Belksiri Scan — relevés et diagnostic Wi-Fi</title>
-<meta name="description" content="Scan Wi-Fi, tests réseau et relevés de couverture sur vos plans, sur iPhone, iPad et Mac.">
+<title>WiFi Analyzer Diag — relevés et diagnostic Wi-Fi</title>
+<meta name="description" content="Scan Wi-Fi, tests réseau et relevés de couverture sur vos plans, sur iPhone, iPad, Mac et Windows.">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Belksiri Scan">
-<meta property="og:title" content="Belksiri Scan — relevés et diagnostic Wi-Fi">
+<meta property="og:site_name" content="WiFi Analyzer Diag">
+<meta property="og:title" content="WiFi Analyzer Diag — relevés et diagnostic Wi-Fi">
 <meta property="og:url" content="https://mboti.github.io/belksiri-scan/fr/">
+<meta property="og:description" content="Scan Wi-Fi, tests réseau et relevés de couverture sur vos plans, sur iPhone, iPad, Mac et Windows.">
+<meta property="og:image" content="https://mboti.github.io/belksiri-scan/assets/icon-512.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="WiFi Analyzer Diag">
+<meta name="twitter:card" content="summary">
 <link rel="canonical" href="https://mboti.github.io/belksiri-scan/fr/">
 <link rel="alternate" hreflang="en" href="https://mboti.github.io/belksiri-scan/">
 <link rel="alternate" hreflang="fr" href="https://mboti.github.io/belksiri-scan/fr/">
@@ -32,9 +38,9 @@
   <div class="wrap">
     <a class="brand" href="./">
       <img src="../assets/icon.png" alt="" width="26" height="26">
-      <span>Belksiri <span class="accent">Scan</span></span>
+      <span>WiFi Analyzer <span class="accent">Diag</span></span>
     </a>
-    <nav aria-label="Belksiri Scan">
+    <nav aria-label="WiFi Analyzer Diag">
       <ul>
         <li><a href="#features">Fonctions</a></li>
         <li><a href="#platforms">Plateformes</a></li>
@@ -67,11 +73,12 @@
 <section class="hero">
   <div class="wrap">
     <img class="mark" src="../assets/icon.png" alt="" width="88" height="88">
-    <h1>Belksiri Scan</h1>
+    <h1>WiFi Analyzer Diag</h1>
     <p class="tagline">Mesurer. Cartographier. Diagnostiquer.</p>
-    <p class="lead">Scan Wi-Fi, tests réseau et relevés de couverture sur vos plans, sur iPhone, iPad et Mac.</p>
+    <p class="formerly">Anciennement Belksiri Scan.</p>
+    <p class="lead">Scan Wi-Fi, tests réseau et relevés de couverture sur vos plans, sur iPhone, iPad, Mac et Windows.</p>
     <p class="actions">
-      <a class="button primary" href="#features">Découvrir Belksiri Scan</a>
+      <a class="button primary" href="#features">Découvrir WiFi Analyzer Diag</a>
       <a class="button" href="privacy.html">Politique de confidentialité</a>
     </p>
   </div>
@@ -99,7 +106,7 @@
         <p>Configurez-la en Bluetooth et utilisez-la comme source de mesure. Sur Mac, installez son firmware par USB.</p>
       </li>
       <li class="card">
-        <h3>Belksiri Scan Pro</h3>
+        <h3>WiFi Analyzer Diag Pro</h3>
         <p>Plusieurs étages et points d’accès par projet, l’analyse du relevé, l’export du rapport de projet et le Diagnostic Santé. Un achat unique, sans abonnement.</p>
       </li>
       <li class="card">
@@ -114,15 +121,23 @@
   <div class="wrap">
     <p class="eyebrow">Plateformes</p>
     <h2>Disponible sur</h2>
-    <p class="prose">Un seul achat de Pro couvre iPhone, iPad et Mac avec le même compte Apple. Sur iPhone et iPad, iOS ne permet pas aux applications de scanner les réseaux Wi-Fi : le scan et les mesures de relevé utilisent la carte ESP32-C5. Sur Mac, le Mac lui-même peut scanner.</p>
-    <ul class="grid narrow">
-      <li class="card">
+    <p class="prose">iPhone, iPad et Mac : un seul achat de Pro le débloque sur les trois avec le même compte Apple.</p>
+    <p class="prose">Windows : l’application et Pro sont proposés sur le Microsoft Store. Pro acheté sur Windows est lié à votre compte Microsoft ; il est distinct d’un achat fait sur l’App Store.</p>
+    <ul class="grid narrow platforms">
+      <li class="card platform">
         <h3>iPhone et iPad</h3>
-        <span class="pill">Bientôt disponible</span>
+        <p>Le scan et les mesures de relevé utilisent la carte ESP32-C5 : iOS ne permet pas aux applications de scanner les réseaux Wi-Fi.</p>
+        <a class="button" href="https://apps.apple.com/app/id6827581112">App Store</a>
       </li>
-      <li class="card">
+      <li class="card platform">
         <h3>Mac</h3>
-        <span class="pill">Bientôt disponible</span>
+        <p>Le Mac scanne lui-même le Wi-Fi ; la carte ESP32-C5 est facultative.</p>
+        <a class="button" href="https://apps.apple.com/app/id6827581112">App Store</a>
+      </li>
+      <li class="card platform">
+        <h3>Windows</h3>
+        <p>Le PC scanne le Wi-Fi avec son propre adaptateur ; Windows peut demander l’accès à l’emplacement.</p>
+        <a class="button" href="https://apps.microsoft.com/detail/9NGSD28GPH2H">Microsoft Store</a>
       </li>
     </ul>
   </div>
@@ -131,7 +146,7 @@
 <section class="pad" id="tutorials">
   <div class="wrap">
     <p class="eyebrow">Tutoriels</p>
-    <h2>Découvrir Belksiri Scan en vidéo</h2>
+    <h2>Découvrir WiFi Analyzer Diag en vidéo</h2>
     <p class="prose">Cinq vidéos en anglais, filmées sur Mac : prise en main, scan Wi-Fi, diagnostic et Ping, relevés de couverture et réglages. Le lien ouvre YouTube, qui applique ses propres règles de confidentialité.</p>
     <p class="actions">
       <a class="button youtube" href="https://www.youtube.com/channel/UCVVVo-XpFFkp37kbJ428Nkg/playlists"><svg class="yt" viewBox="0 3.6 24 16.8" width="29" height="20" aria-hidden="true" focusable="false"><path fill="#FF0000" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1 31.6 31.6 0 0 0 .5-5.8 31.6 31.6 0 0 0-.5-5.8z"/><path fill="#FFFFFF" d="M9.6 15.6V8.4l6.2 3.6z"/></svg><span>Regarder sur YouTube</span></a>
@@ -145,7 +160,7 @@
   <div class="wrap">
     <a class="brand" href="./">
       <img src="../assets/icon.png" alt="" width="26" height="26">
-      <span>Belksiri <span class="accent">Scan</span></span>
+      <span>WiFi Analyzer <span class="accent">Diag</span></span>
     </a>
     <nav aria-label="Accueil">
       <ul>

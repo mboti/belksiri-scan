@@ -3,12 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Preparar la placa ESP32-C5 — Belksiri Scan</title>
-<meta name="description" content="Belksiri Scan — Preparar la placa ESP32-C5">
+<title>Preparar la placa ESP32-C5 — WiFi Analyzer Diag</title>
+<meta name="description" content="WiFi Analyzer Diag — Preparar la placa ESP32-C5">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="Belksiri Scan">
-<meta property="og:title" content="Preparar la placa ESP32-C5 — Belksiri Scan">
+<meta property="og:site_name" content="WiFi Analyzer Diag">
+<meta property="og:title" content="Preparar la placa ESP32-C5 — WiFi Analyzer Diag">
 <meta property="og:url" content="https://mboti.github.io/belksiri-scan/es/firmware.html">
+<meta property="og:description" content="WiFi Analyzer Diag — Preparar la placa ESP32-C5">
+<meta property="og:image" content="https://mboti.github.io/belksiri-scan/assets/icon-512.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="WiFi Analyzer Diag">
+<meta name="twitter:card" content="summary">
 <link rel="canonical" href="https://mboti.github.io/belksiri-scan/es/firmware.html">
 <link rel="alternate" hreflang="en" href="https://mboti.github.io/belksiri-scan/firmware.html">
 <link rel="alternate" hreflang="fr" href="https://mboti.github.io/belksiri-scan/fr/firmware.html">
@@ -32,9 +38,9 @@
   <div class="wrap">
     <a class="brand" href="./">
       <img src="../assets/icon.png" alt="" width="26" height="26">
-      <span>Belksiri <span class="accent">Scan</span></span>
+      <span>WiFi Analyzer <span class="accent">Diag</span></span>
     </a>
-    <nav aria-label="Belksiri Scan">
+    <nav aria-label="WiFi Analyzer Diag">
       <ul>
         <li><a href="./#features">Funciones</a></li>
         <li><a href="./#platforms">Plataformas</a></li>
@@ -67,12 +73,12 @@
 
 <h1>Preparar la placa ESP32-C5</h1>
 
-<p class="lead">En iPhone y iPad, Belksiri Scan mide con una placa ESP32-C5. Para instalar su firmware, conecte la placa por USB a un ordenador y use <strong>Belksiri Firmware Installer</strong>, una utilidad gratuita e independiente: en ese ordenador no se necesita Belksiri Scan, ni cuenta, ni conexión a Internet, ni herramientas de desarrollo.</p>
+<p class="lead">En iPhone y iPad, WiFi Analyzer Diag mide con una placa ESP32-C5. Para instalar su firmware, conecte la placa por USB a un ordenador y use <strong>Belksiri Firmware Installer</strong>, una utilidad gratuita e independiente: en ese ordenador no se necesita WiFi Analyzer Diag, ni cuenta, ni conexión a Internet, ni herramientas de desarrollo.</p>
 
 <h2>Estado de esta versión</h2>
 <ul class="note">
   <li><strong>Versión preliminar</strong> para Mac con Apple silicon, Mac Intel y PC con Windows x64.</li>
-  <li><strong>Mac con Apple silicon:</strong> firmada con Developer ID y notarizada por Apple. <strong>Instalación USB validada con una placa real</strong>: se programó una ESP32-C5 (4 MB, conversor USB CH340), se releyó byte a byte y el firmware arrancó. Queda por confirmar: la conexión y el escaneo desde Belksiri Scan en iPhone o iPad tras esta instalación.</li>
+  <li><strong>Mac con Apple silicon:</strong> firmada con Developer ID y notarizada por Apple. <strong>Instalación USB validada con una placa real</strong>: se programó una ESP32-C5 (4 MB, conversor USB CH340), se releyó byte a byte y el firmware arrancó. Queda por confirmar: la conexión y el escaneo desde WiFi Analyzer Diag en iPhone o iPad tras esta instalación.</li>
   <li><strong>Mac Intel:</strong> firmada con Developer ID y notarizada por Apple. Solo se ha arrancado con Rosetta en un Mac con Apple silicon: <strong>sin pruebas en un Mac Intel, ninguna instalación USB probada</strong>.</li>
   <li><strong>Windows x64:</strong> <strong>sin firmar</strong> (sin certificado Authenticode). Compilada, probada con placas simuladas y arrancada en una máquina Windows de GitHub Actions: <strong>sin pruebas en un PC real, ninguna instalación USB probada</strong>.</li>
   <li><strong>Idioma de la utilidad:</strong> solo inglés, sea cual sea el idioma de esta página. Por eso las etiquetas citadas a continuación están en inglés, como en pantalla.</li>
@@ -119,9 +125,9 @@
   <li>Compruebe la línea de la placa: <code>ESP32-C5 (rev v1.0) · 4 MB flash</code> <code>Compatible</code>. Si hay varias placas conectadas, elija una.</li>
   <li>Haga clic en <strong>Install firmware</strong> y confirme.</li>
   <li>Espere a <em>Firmware installed and verified</em>. No desconecte la placa ni cierre la ventana durante la operación.</li>
-  <li>En el iPhone o iPad, abra Belksiri Scan y conéctese a la placa por Bluetooth.</li>
+  <li>En el iPhone o iPad, abra WiFi Analyzer Diag y conéctese a la placa por Bluetooth.</li>
 </ol>
-<p><strong>Qué se borra:</strong> los ajustes guardados en la placa, incluida su red Wi-Fi y su contraseña. El diálogo de confirmación lo recuerda. «Verified» significa que la placa se ha releído y coincide con la imagen; la conexión desde Belksiri Scan confirma después que el firmware funciona.</p>
+<p><strong>Qué se borra:</strong> los ajustes guardados en la placa, incluida su red Wi-Fi y su contraseña. El diálogo de confirmación lo recuerda. «Verified» significa que la placa se ha releído y coincide con la imagen; la conexión desde WiFi Analyzer Diag confirma después que el firmware funciona.</p>
 
 <h2>Si la placa no responde</h2>
 <p>Mantenga pulsado <strong>BOOT</strong>, pulse y suelte <strong>RESET</strong>, suelte <strong>BOOT</strong> y haga clic en <strong>Try again</strong>. Ante un error, <strong>Copy details</strong> copia un informe para adjuntar a su mensaje a <a href="mailto:mboti.dev@gmail.com">mboti.dev@gmail.com</a>.</p>
@@ -132,7 +138,7 @@
   <div class="wrap">
     <a class="brand" href="./">
       <img src="../assets/icon.png" alt="" width="26" height="26">
-      <span>Belksiri <span class="accent">Scan</span></span>
+      <span>WiFi Analyzer <span class="accent">Diag</span></span>
     </a>
     <nav aria-label="Inicio">
       <ul>

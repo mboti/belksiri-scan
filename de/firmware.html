@@ -3,12 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Die ESP32-C5-Platine vorbereiten — Belksiri Scan</title>
-<meta name="description" content="Belksiri Scan — Die ESP32-C5-Platine vorbereiten">
+<title>Die ESP32-C5-Platine vorbereiten — WiFi Analyzer Diag</title>
+<meta name="description" content="WiFi Analyzer Diag — Die ESP32-C5-Platine vorbereiten">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="Belksiri Scan">
-<meta property="og:title" content="Die ESP32-C5-Platine vorbereiten — Belksiri Scan">
+<meta property="og:site_name" content="WiFi Analyzer Diag">
+<meta property="og:title" content="Die ESP32-C5-Platine vorbereiten — WiFi Analyzer Diag">
 <meta property="og:url" content="https://mboti.github.io/belksiri-scan/de/firmware.html">
+<meta property="og:description" content="WiFi Analyzer Diag — Die ESP32-C5-Platine vorbereiten">
+<meta property="og:image" content="https://mboti.github.io/belksiri-scan/assets/icon-512.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="WiFi Analyzer Diag">
+<meta name="twitter:card" content="summary">
 <link rel="canonical" href="https://mboti.github.io/belksiri-scan/de/firmware.html">
 <link rel="alternate" hreflang="en" href="https://mboti.github.io/belksiri-scan/firmware.html">
 <link rel="alternate" hreflang="fr" href="https://mboti.github.io/belksiri-scan/fr/firmware.html">
@@ -32,9 +38,9 @@
   <div class="wrap">
     <a class="brand" href="./">
       <img src="../assets/icon.png" alt="" width="26" height="26">
-      <span>Belksiri <span class="accent">Scan</span></span>
+      <span>WiFi Analyzer <span class="accent">Diag</span></span>
     </a>
-    <nav aria-label="Belksiri Scan">
+    <nav aria-label="WiFi Analyzer Diag">
       <ul>
         <li><a href="./#features">Funktionen</a></li>
         <li><a href="./#platforms">Plattformen</a></li>
@@ -67,12 +73,12 @@
 
 <h1>Die ESP32-C5-Platine vorbereiten</h1>
 
-<p class="lead">Auf iPhone und iPad misst Belksiri Scan mit einer ESP32-C5-Platine. Um ihre Firmware zu installieren, verbinden Sie die Platine per USB mit einem Computer und verwenden <strong>Belksiri Firmware Installer</strong>, ein kostenloses, eigenständiges Hilfsprogramm: Auf diesem Computer sind weder Belksiri Scan noch ein Konto, eine Internetverbindung oder Entwicklerwerkzeuge nötig.</p>
+<p class="lead">Auf iPhone und iPad misst WiFi Analyzer Diag mit einer ESP32-C5-Platine. Um ihre Firmware zu installieren, verbinden Sie die Platine per USB mit einem Computer und verwenden <strong>Belksiri Firmware Installer</strong>, ein kostenloses, eigenständiges Hilfsprogramm: Auf diesem Computer sind weder WiFi Analyzer Diag noch ein Konto, eine Internetverbindung oder Entwicklerwerkzeuge nötig.</p>
 
 <h2>Stand dieser Version</h2>
 <ul class="note">
   <li><strong>Vorabversion</strong> für Mac mit Apple silicon, Intel-Mac und Windows-x64-PC.</li>
-  <li><strong>Mac mit Apple silicon:</strong> mit Developer ID signiert und von Apple notarisiert. <strong>USB-Installation an einer echten Platine validiert</strong>: ein ESP32-C5 (4 MB, USB-Wandler CH340) wurde programmiert, Byte für Byte zurückgelesen, und die Firmware ist gestartet. Noch zu bestätigen: die Verbindung und der Scan aus Belksiri Scan auf iPhone oder iPad nach dieser Installation.</li>
+  <li><strong>Mac mit Apple silicon:</strong> mit Developer ID signiert und von Apple notarisiert. <strong>USB-Installation an einer echten Platine validiert</strong>: ein ESP32-C5 (4 MB, USB-Wandler CH340) wurde programmiert, Byte für Byte zurückgelesen, und die Firmware ist gestartet. Noch zu bestätigen: die Verbindung und der Scan aus WiFi Analyzer Diag auf iPhone oder iPad nach dieser Installation.</li>
   <li><strong>Intel-Mac:</strong> mit Developer ID signiert und von Apple notarisiert. Nur unter Rosetta auf einem Mac mit Apple silicon gestartet: <strong>nicht auf einem Intel-Mac ausprobiert, keine USB-Installation getestet</strong>.</li>
   <li><strong>Windows x64:</strong> <strong>nicht signiert</strong> (kein Authenticode-Zertifikat). Auf einem Windows-Rechner von GitHub Actions gebaut, an simulierten Platinen getestet und gestartet: <strong>nicht auf einem echten PC ausprobiert, keine USB-Installation getestet</strong>.</li>
   <li><strong>Sprache des Programms:</strong> nur Englisch, unabhängig von der Sprache dieser Seite. Die unten genannten Bezeichnungen sind daher englisch, wie auf dem Bildschirm.</li>
@@ -119,9 +125,9 @@
   <li>Prüfen Sie die Zeile der Platine: <code>ESP32-C5 (rev v1.0) · 4 MB flash</code> <code>Compatible</code>. Sind mehrere Platinen angeschlossen, wählen Sie eine aus.</li>
   <li>Klicken Sie auf <strong>Install firmware</strong> und bestätigen Sie.</li>
   <li>Warten Sie auf <em>Firmware installed and verified</em>. Trennen Sie die Platine nicht und schließen Sie das Fenster nicht, solange der Vorgang läuft.</li>
-  <li>Öffnen Sie auf dem iPhone oder iPad Belksiri Scan und verbinden Sie sich per Bluetooth mit der Platine.</li>
+  <li>Öffnen Sie auf dem iPhone oder iPad WiFi Analyzer Diag und verbinden Sie sich per Bluetooth mit der Platine.</li>
 </ol>
-<p><strong>Was gelöscht wird:</strong> die auf der Platine gespeicherten Einstellungen, einschließlich ihres WLAN-Netzes und Passworts. Der Bestätigungsdialog weist darauf hin. „Verified“ bedeutet, dass die Platine zurückgelesen wurde und dem Abbild entspricht; die Verbindung aus Belksiri Scan bestätigt dann, dass die Firmware läuft.</p>
+<p><strong>Was gelöscht wird:</strong> die auf der Platine gespeicherten Einstellungen, einschließlich ihres WLAN-Netzes und Passworts. Der Bestätigungsdialog weist darauf hin. „Verified“ bedeutet, dass die Platine zurückgelesen wurde und dem Abbild entspricht; die Verbindung aus WiFi Analyzer Diag bestätigt dann, dass die Firmware läuft.</p>
 
 <h2>Wenn die Platine nicht antwortet</h2>
 <p>Halten Sie die Taste <strong>BOOT</strong>, drücken und lösen Sie <strong>RESET</strong>, lösen Sie <strong>BOOT</strong> und klicken Sie dann auf <strong>Try again</strong>. Bei einem Fehler kopiert <strong>Copy details</strong> einen Bericht, den Sie Ihrer Nachricht an <a href="mailto:mboti.dev@gmail.com">mboti.dev@gmail.com</a> beifügen können.</p>
@@ -132,7 +138,7 @@
   <div class="wrap">
     <a class="brand" href="./">
       <img src="../assets/icon.png" alt="" width="26" height="26">
-      <span>Belksiri <span class="accent">Scan</span></span>
+      <span>WiFi Analyzer <span class="accent">Diag</span></span>
     </a>
     <nav aria-label="Startseite">
       <ul>

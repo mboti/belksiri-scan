@@ -3,12 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>准备 ESP32-C5 开发板 — Belksiri Scan</title>
-<meta name="description" content="Belksiri Scan — 准备 ESP32-C5 开发板">
+<title>准备 ESP32-C5 开发板 — WiFi Analyzer Diag</title>
+<meta name="description" content="WiFi Analyzer Diag — 准备 ESP32-C5 开发板">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="Belksiri Scan">
-<meta property="og:title" content="准备 ESP32-C5 开发板 — Belksiri Scan">
+<meta property="og:site_name" content="WiFi Analyzer Diag">
+<meta property="og:title" content="准备 ESP32-C5 开发板 — WiFi Analyzer Diag">
 <meta property="og:url" content="https://mboti.github.io/belksiri-scan/zh/firmware.html">
+<meta property="og:description" content="WiFi Analyzer Diag — 准备 ESP32-C5 开发板">
+<meta property="og:image" content="https://mboti.github.io/belksiri-scan/assets/icon-512.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="WiFi Analyzer Diag">
+<meta name="twitter:card" content="summary">
 <link rel="canonical" href="https://mboti.github.io/belksiri-scan/zh/firmware.html">
 <link rel="alternate" hreflang="en" href="https://mboti.github.io/belksiri-scan/firmware.html">
 <link rel="alternate" hreflang="fr" href="https://mboti.github.io/belksiri-scan/fr/firmware.html">
@@ -32,9 +38,9 @@
   <div class="wrap">
     <a class="brand" href="./">
       <img src="../assets/icon.png" alt="" width="26" height="26">
-      <span>Belksiri <span class="accent">Scan</span></span>
+      <span>WiFi Analyzer <span class="accent">Diag</span></span>
     </a>
-    <nav aria-label="Belksiri Scan">
+    <nav aria-label="WiFi Analyzer Diag">
       <ul>
         <li><a href="./#features">功能</a></li>
         <li><a href="./#platforms">平台</a></li>
@@ -67,12 +73,12 @@
 
 <h1>准备 ESP32-C5 开发板</h1>
 
-<p class="lead">在 iPhone 和 iPad 上，Belksiri Scan 通过 ESP32-C5 开发板进行测量。要为开发板安装固件，请用 USB 将其连接到电脑，并使用免费的独立工具 <strong>Belksiri Firmware Installer</strong>：该电脑上无需 Belksiri Scan、账户、互联网连接或开发工具。</p>
+<p class="lead">在 iPhone 和 iPad 上，WiFi Analyzer Diag 通过 ESP32-C5 开发板进行测量。要为开发板安装固件，请用 USB 将其连接到电脑，并使用免费的独立工具 <strong>Belksiri Firmware Installer</strong>：该电脑上无需 WiFi Analyzer Diag、账户、互联网连接或开发工具。</p>
 
 <h2>此版本的状态</h2>
 <ul class="note">
   <li><strong>预览版</strong>，适用于 Apple 芯片 Mac、Intel Mac 和 Windows x64 电脑。</li>
-  <li><strong>Apple 芯片 Mac：</strong>已使用 Developer ID 签名并经 Apple 公证。<strong>USB 安装已在真实开发板上验证</strong>：一块 ESP32-C5（4 MB，CH340 USB 转换器）已完成烧录和逐字节回读校验，固件已启动。尚待确认：此次安装后从 iPhone 或 iPad 上的 Belksiri Scan 进行连接和扫描。</li>
+  <li><strong>Apple 芯片 Mac：</strong>已使用 Developer ID 签名并经 Apple 公证。<strong>USB 安装已在真实开发板上验证</strong>：一块 ESP32-C5（4 MB，CH340 USB 转换器）已完成烧录和逐字节回读校验，固件已启动。尚待确认：此次安装后从 iPhone 或 iPad 上的 WiFi Analyzer Diag 进行连接和扫描。</li>
   <li><strong>Intel Mac：</strong>已使用 Developer ID 签名并经 Apple 公证。仅在 Apple 芯片 Mac 上通过 Rosetta 启动过：<strong>未在 Intel Mac 上试用，未测试 USB 安装</strong>。</li>
   <li><strong>Windows x64：</strong><strong>未签名</strong>（没有 Authenticode 证书）。已在 GitHub Actions 的 Windows 机器上编译、通过模拟开发板测试并启动：<strong>未在真实电脑上试用，未测试 USB 安装</strong>。</li>
   <li><strong>工具语言：</strong>仅英语，与本页语言无关。因此下文引用的界面文字均为英语，与屏幕显示一致。</li>
@@ -119,9 +125,9 @@
   <li>检查开发板一行：<code>ESP32-C5 (rev v1.0) · 4 MB flash</code> <code>Compatible</code>。如连接了多块开发板，请选择其中一块。</li>
   <li>点击 <strong>Install firmware</strong> 并确认。</li>
   <li>等待显示 <em>Firmware installed and verified</em>。操作期间请勿拔下开发板或关闭窗口。</li>
-  <li>在 iPhone 或 iPad 上打开 Belksiri Scan，通过蓝牙连接开发板。</li>
+  <li>在 iPhone 或 iPad 上打开 WiFi Analyzer Diag，通过蓝牙连接开发板。</li>
 </ol>
-<p><strong>会被清除的内容：</strong>开发板上保存的设置，包括其 Wi-Fi 网络和密码。确认对话框会提示这一点。“Verified”表示已回读开发板且与镜像一致；随后从 Belksiri Scan 连接即可确认固件正在运行。</p>
+<p><strong>会被清除的内容：</strong>开发板上保存的设置，包括其 Wi-Fi 网络和密码。确认对话框会提示这一点。“Verified”表示已回读开发板且与镜像一致；随后从 WiFi Analyzer Diag 连接即可确认固件正在运行。</p>
 
 <h2>如果开发板没有响应</h2>
 <p>按住 <strong>BOOT</strong> 键，按下并松开 <strong>RESET</strong>，松开 <strong>BOOT</strong>，然后点击 <strong>Try again</strong>。出错时，<strong>Copy details</strong> 会复制一份报告，可附在发给 <a href="mailto:mboti.dev@gmail.com">mboti.dev@gmail.com</a> 的邮件中。</p>
@@ -132,7 +138,7 @@
   <div class="wrap">
     <a class="brand" href="./">
       <img src="../assets/icon.png" alt="" width="26" height="26">
-      <span>Belksiri <span class="accent">Scan</span></span>
+      <span>WiFi Analyzer <span class="accent">Diag</span></span>
     </a>
     <nav aria-label="首页">
       <ul>

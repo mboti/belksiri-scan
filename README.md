@@ -1,6 +1,6 @@
-# Belksiri Scan — public pages
+# WiFi Analyzer Diag — public pages
 
-The public pages of Belksiri Scan: home, Privacy Policy, Terms of Use and
+The public pages of WiFi Analyzer Diag (formerly Belksiri Scan): home, Privacy Policy, Terms of Use and
 Support, in nine languages. Plain static HTML, no build step on the host, no
 JavaScript, no web font, no CDN, no analytics, no cookie. They work opened
 straight off a disk, which is how to review them before publishing.

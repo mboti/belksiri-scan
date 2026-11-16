@@ -3,12 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Подготовка платы ESP32-C5 — Belksiri Scan</title>
-<meta name="description" content="Belksiri Scan — Подготовка платы ESP32-C5">
+<title>Подготовка платы ESP32-C5 — WiFi Analyzer Diag</title>
+<meta name="description" content="WiFi Analyzer Diag — Подготовка платы ESP32-C5">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="Belksiri Scan">
-<meta property="og:title" content="Подготовка платы ESP32-C5 — Belksiri Scan">
+<meta property="og:site_name" content="WiFi Analyzer Diag">
+<meta property="og:title" content="Подготовка платы ESP32-C5 — WiFi Analyzer Diag">
 <meta property="og:url" content="https://mboti.github.io/belksiri-scan/ru/firmware.html">
+<meta property="og:description" content="WiFi Analyzer Diag — Подготовка платы ESP32-C5">
+<meta property="og:image" content="https://mboti.github.io/belksiri-scan/assets/icon-512.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="WiFi Analyzer Diag">
+<meta name="twitter:card" content="summary">
 <link rel="canonical" href="https://mboti.github.io/belksiri-scan/ru/firmware.html">
 <link rel="alternate" hreflang="en" href="https://mboti.github.io/belksiri-scan/firmware.html">
 <link rel="alternate" hreflang="fr" href="https://mboti.github.io/belksiri-scan/fr/firmware.html">
@@ -32,9 +38,9 @@
   <div class="wrap">
     <a class="brand" href="./">
       <img src="../assets/icon.png" alt="" width="26" height="26">
-      <span>Belksiri <span class="accent">Scan</span></span>
+      <span>WiFi Analyzer <span class="accent">Diag</span></span>
     </a>
-    <nav aria-label="Belksiri Scan">
+    <nav aria-label="WiFi Analyzer Diag">
       <ul>
         <li><a href="./#features">Возможности</a></li>
         <li><a href="./#platforms">Платформы</a></li>
@@ -67,12 +73,12 @@
 
 <h1>Подготовка платы ESP32-C5</h1>
 
-<p class="lead">На iPhone и iPad Belksiri Scan проводит измерения с помощью платы ESP32-C5. Чтобы установить её прошивку, подключите плату по USB к компьютеру и используйте <strong>Belksiri Firmware Installer</strong> — бесплатную автономную утилиту: на этом компьютере не нужны ни Belksiri Scan, ни учётная запись, ни подключение к интернету, ни инструменты разработчика.</p>
+<p class="lead">На iPhone и iPad WiFi Analyzer Diag проводит измерения с помощью платы ESP32-C5. Чтобы установить её прошивку, подключите плату по USB к компьютеру и используйте <strong>Belksiri Firmware Installer</strong> — бесплатную автономную утилиту: на этом компьютере не нужны ни WiFi Analyzer Diag, ни учётная запись, ни подключение к интернету, ни инструменты разработчика.</p>
 
 <h2>Состояние этой версии</h2>
 <ul class="note">
   <li><strong>Предварительная версия</strong> для Mac на Apple silicon, Mac с Intel и ПК с Windows x64.</li>
-  <li><strong>Mac на Apple silicon:</strong> подписана Developer ID и нотаризована Apple. <strong>Установка по USB проверена на реальной плате</strong>: плата ESP32-C5 (4 МБ, USB-преобразователь CH340) прошита, считана побайтно, и прошивка запустилась. Ещё предстоит подтвердить: подключение и сканирование из Belksiri Scan на iPhone или iPad после этой установки.</li>
+  <li><strong>Mac на Apple silicon:</strong> подписана Developer ID и нотаризована Apple. <strong>Установка по USB проверена на реальной плате</strong>: плата ESP32-C5 (4 МБ, USB-преобразователь CH340) прошита, считана побайтно, и прошивка запустилась. Ещё предстоит подтвердить: подключение и сканирование из WiFi Analyzer Diag на iPhone или iPad после этой установки.</li>
   <li><strong>Mac с Intel:</strong> подписана Developer ID и нотаризована Apple. Запускалась только через Rosetta на Mac с Apple silicon: <strong>на Mac с Intel не проверялась, установка по USB не проверялась</strong>.</li>
   <li><strong>Windows x64:</strong> <strong>не подписана</strong> (нет сертификата Authenticode). Собрана, проверена на имитируемых платах и запущена на Windows-машине GitHub Actions: <strong>на реальном ПК не проверялась, установка по USB не проверялась</strong>.</li>
   <li><strong>Язык утилиты:</strong> только английский, независимо от языка этой страницы. Поэтому названия, приведённые ниже, даны на английском, как на экране.</li>
@@ -119,9 +125,9 @@
   <li>Проверьте строку платы: <code>ESP32-C5 (rev v1.0) · 4 MB flash</code> <code>Compatible</code>. Если подключено несколько плат, выберите одну.</li>
   <li>Нажмите <strong>Install firmware</strong> и подтвердите.</li>
   <li>Дождитесь сообщения <em>Firmware installed and verified</em>. Не отключайте плату и не закрывайте окно во время операции.</li>
-  <li>На iPhone или iPad откройте Belksiri Scan и подключитесь к плате по Bluetooth.</li>
+  <li>На iPhone или iPad откройте WiFi Analyzer Diag и подключитесь к плате по Bluetooth.</li>
 </ol>
-<p><strong>Что стирается:</strong> настройки, сохранённые на плате, включая её сеть Wi-Fi и пароль. Окно подтверждения напоминает об этом. «Verified» означает, что содержимое платы прочитано и совпадает с образом; подключение из Belksiri Scan затем подтверждает, что прошивка работает.</p>
+<p><strong>Что стирается:</strong> настройки, сохранённые на плате, включая её сеть Wi-Fi и пароль. Окно подтверждения напоминает об этом. «Verified» означает, что содержимое платы прочитано и совпадает с образом; подключение из WiFi Analyzer Diag затем подтверждает, что прошивка работает.</p>
 
 <h2>Если плата не отвечает</h2>
 <p>Удерживайте кнопку <strong>BOOT</strong>, нажмите и отпустите <strong>RESET</strong>, отпустите <strong>BOOT</strong>, затем нажмите <strong>Try again</strong>. При ошибке кнопка <strong>Copy details</strong> копирует отчёт, который можно приложить к письму на <a href="mailto:mboti.dev@gmail.com">mboti.dev@gmail.com</a>.</p>
@@ -132,7 +138,7 @@
   <div class="wrap">
     <a class="brand" href="./">
       <img src="../assets/icon.png" alt="" width="26" height="26">
-      <span>Belksiri <span class="accent">Scan</span></span>
+      <span>WiFi Analyzer <span class="accent">Diag</span></span>
     </a>
     <nav aria-label="Главная">
       <ul>

@@ -1,8 +1,8 @@
 /*
- * Belksiri Scan — the public pages.
+ * WiFi Analyzer Diag (formerly Belksiri Scan) — the public pages.
  *
  * The same stylesheet as Belksiri's MarkDown One pages (mboti.github.io/
- * markdown-one), with Belksiri Scan's own accent: `--accent` is `AppTheme.seed`
+ * markdown-one), with WiFi Analyzer Diag's own accent: `--accent` is `AppTheme.seed`
  * (#2E7DF6). No framework, no font file, no script: opening a page contacts
  * nobody but the host it was asked for. Added at the end: the language menu
  * (a <details>, so it works without JavaScript) and right-to-left Arabic.
@@ -11,7 +11,7 @@
 :root {
   color-scheme: light dark;
 
-  /* Belksiri Scan's accent: AppTheme.seed, lightened for the dark scheme. */
+  /* WiFi Analyzer Diag's accent: AppTheme.seed, lightened for the dark scheme. */
   --ink: #12151b;
   --paper: #ffffff;
   --surface: #f7f8fa;
@@ -207,6 +207,13 @@ p, ul, ol, table { margin: 0 0 1rem; }
   margin: 0 0 1rem;
 }
 
+/* The former name, under the tagline: readers arriving from older links know they are in the right place. */
+.formerly {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: -0.5rem 0 1rem;
+}
+
 /* The small label above a section heading. */
 .eyebrow {
   font-size: 0.75rem;
@@ -310,6 +317,24 @@ section.pad { padding: 3.5rem 0; }
 
 .grid.narrow {
   grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+}
+
+/* Platforms: three cards side by side on a computer, stacked on a phone; the store buttons line up at the bottom. */
+.grid.platforms {
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+
+.card.platform {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card.platform h3 { margin: 0; }
+
+.card.platform .button {
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .card {

@@ -3,12 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>تجهيز لوحة ESP32-C5 — Belksiri Scan</title>
-<meta name="description" content="Belksiri Scan — تجهيز لوحة ESP32-C5">
+<title>تجهيز لوحة ESP32-C5 — WiFi Analyzer Diag</title>
+<meta name="description" content="WiFi Analyzer Diag — تجهيز لوحة ESP32-C5">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="Belksiri Scan">
-<meta property="og:title" content="تجهيز لوحة ESP32-C5 — Belksiri Scan">
+<meta property="og:site_name" content="WiFi Analyzer Diag">
+<meta property="og:title" content="تجهيز لوحة ESP32-C5 — WiFi Analyzer Diag">
 <meta property="og:url" content="https://mboti.github.io/belksiri-scan/ar/firmware.html">
+<meta property="og:description" content="WiFi Analyzer Diag — تجهيز لوحة ESP32-C5">
+<meta property="og:image" content="https://mboti.github.io/belksiri-scan/assets/icon-512.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="WiFi Analyzer Diag">
+<meta name="twitter:card" content="summary">
 <link rel="canonical" href="https://mboti.github.io/belksiri-scan/ar/firmware.html">
 <link rel="alternate" hreflang="en" href="https://mboti.github.io/belksiri-scan/firmware.html">
 <link rel="alternate" hreflang="fr" href="https://mboti.github.io/belksiri-scan/fr/firmware.html">
@@ -32,9 +38,9 @@
   <div class="wrap">
     <a class="brand" href="./">
       <img src="../assets/icon.png" alt="" width="26" height="26">
-      <span>Belksiri <span class="accent">Scan</span></span>
+      <span>WiFi Analyzer <span class="accent">Diag</span></span>
     </a>
-    <nav aria-label="Belksiri Scan">
+    <nav aria-label="WiFi Analyzer Diag">
       <ul>
         <li><a href="./#features">الميزات</a></li>
         <li><a href="./#platforms">المنصات</a></li>
@@ -67,12 +73,12 @@
 
 <h1>تجهيز لوحة ESP32-C5</h1>
 
-<p class="lead">على iPhone وiPad، يُجري Belksiri Scan القياسات بواسطة لوحة ESP32-C5. لتثبيت البرنامج الثابت عليها، وصّل اللوحة عبر USB بحاسوب واستخدم <strong>Belksiri Firmware Installer</strong>، وهو أداة مجانية مستقلة: لا حاجة على هذا الحاسوب إلى Belksiri Scan ولا إلى حساب ولا إلى اتصال بالإنترنت ولا إلى أدوات تطوير.</p>
+<p class="lead">على iPhone وiPad، يُجري WiFi Analyzer Diag القياسات بواسطة لوحة ESP32-C5. لتثبيت البرنامج الثابت عليها، وصّل اللوحة عبر USB بحاسوب واستخدم <strong>Belksiri Firmware Installer</strong>، وهو أداة مجانية مستقلة: لا حاجة على هذا الحاسوب إلى WiFi Analyzer Diag ولا إلى حساب ولا إلى اتصال بالإنترنت ولا إلى أدوات تطوير.</p>
 
 <h2>حالة هذا الإصدار</h2>
 <ul class="note">
   <li><strong>إصدار تجريبي</strong> لأجهزة Mac بمعالج Apple silicon وMac بمعالج Intel وحواسيب Windows x64.</li>
-  <li><strong>Mac بمعالج Apple silicon:</strong> موقَّع بشهادة Developer ID وموثَّق من Apple. <strong>تم التحقق من التثبيت عبر USB على لوحة حقيقية</strong>: بُرمجت لوحة ESP32-C5 (4 ميغابايت، محوّل USB من نوع CH340)، وأُعيدت قراءتها بايتًا ببايت، وبدأ تشغيل البرنامج الثابت. يبقى تأكيد: الاتصال والمسح من Belksiri Scan على iPhone أو iPad بعد هذا التثبيت.</li>
+  <li><strong>Mac بمعالج Apple silicon:</strong> موقَّع بشهادة Developer ID وموثَّق من Apple. <strong>تم التحقق من التثبيت عبر USB على لوحة حقيقية</strong>: بُرمجت لوحة ESP32-C5 (4 ميغابايت، محوّل USB من نوع CH340)، وأُعيدت قراءتها بايتًا ببايت، وبدأ تشغيل البرنامج الثابت. يبقى تأكيد: الاتصال والمسح من WiFi Analyzer Diag على iPhone أو iPad بعد هذا التثبيت.</li>
   <li><strong>Mac بمعالج Intel:</strong> موقَّع بشهادة Developer ID وموثَّق من Apple. لم يُشغَّل إلا عبر Rosetta على Mac بمعالج Apple silicon: <strong>لم يُجرَّب على Mac بمعالج Intel، ولم يُختبر التثبيت عبر USB</strong>.</li>
   <li><strong>Windows x64:</strong> <strong>غير موقَّع</strong> (لا توجد شهادة Authenticode). جُمّع واختُبر على لوحات محاكاة وشُغّل على جهاز Windows من GitHub Actions: <strong>لم يُجرَّب على حاسوب حقيقي، ولم يُختبر التثبيت عبر USB</strong>.</li>
   <li><strong>لغة الأداة:</strong> الإنجليزية فقط، أيًّا كانت لغة هذه الصفحة. لذلك تَرِد التسميات المذكورة أدناه بالإنجليزية كما تظهر على الشاشة.</li>
@@ -119,9 +125,9 @@
   <li>تحقق من سطر اللوحة: <code>ESP32-C5 (rev v1.0) · 4 MB flash</code> <code>Compatible</code>. إذا كانت عدة لوحات موصولة، فاختر واحدة.</li>
   <li>انقر <strong>Install firmware</strong> ثم أكّد.</li>
   <li>انتظر ظهور <em>Firmware installed and verified</em>. لا تفصل اللوحة ولا تغلق النافذة أثناء العملية.</li>
-  <li>على iPhone أو iPad، افتح Belksiri Scan واتصل باللوحة عبر Bluetooth.</li>
+  <li>على iPhone أو iPad، افتح WiFi Analyzer Diag واتصل باللوحة عبر Bluetooth.</li>
 </ol>
-<p><strong>ما يُمحى:</strong> الإعدادات المحفوظة على اللوحة، ومنها شبكة Wi-Fi وكلمة مرورها. وتذكّر نافذة التأكيد بذلك. تعني «Verified» أن محتوى اللوحة أُعيدت قراءته وطابق الصورة؛ ثم يؤكد الاتصال من Belksiri Scan أن البرنامج الثابت يعمل.</p>
+<p><strong>ما يُمحى:</strong> الإعدادات المحفوظة على اللوحة، ومنها شبكة Wi-Fi وكلمة مرورها. وتذكّر نافذة التأكيد بذلك. تعني «Verified» أن محتوى اللوحة أُعيدت قراءته وطابق الصورة؛ ثم يؤكد الاتصال من WiFi Analyzer Diag أن البرنامج الثابت يعمل.</p>
 
 <h2>إذا لم تستجب اللوحة</h2>
 <p>اضغط مطولًا على زر <strong>BOOT</strong>، واضغط <strong>RESET</strong> ثم حرّره، وحرّر <strong>BOOT</strong>، ثم انقر <strong>Try again</strong>. عند حدوث خطأ، ينسخ <strong>Copy details</strong> تقريرًا لإرفاقه برسالتك إلى <a href="mailto:mboti.dev@gmail.com">mboti.dev@gmail.com</a>.</p>
@@ -132,7 +138,7 @@
   <div class="wrap">
     <a class="brand" href="./">
       <img src="../assets/icon.png" alt="" width="26" height="26">
-      <span>Belksiri <span class="accent">Scan</span></span>
+      <span>WiFi Analyzer <span class="accent">Diag</span></span>
     </a>
     <nav aria-label="الرئيسية">
       <ul>

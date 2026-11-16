@@ -3,12 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Belksiri Scan — مسح شبكات Wi-Fi وتشخيصها</title>
-<meta name="description" content="مسح شبكات Wi-Fi واختبارات الشبكة ومسح التغطية على مخططاتك، على iPhone وiPad وMac.">
+<title>WiFi Analyzer Diag — مسح شبكات Wi-Fi وتشخيصها</title>
+<meta name="description" content="مسح شبكات Wi-Fi واختبارات الشبكة ومسح التغطية على مخططاتك، على iPhone وiPad وMac وWindows.">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Belksiri Scan">
-<meta property="og:title" content="Belksiri Scan — مسح شبكات Wi-Fi وتشخيصها">
+<meta property="og:site_name" content="WiFi Analyzer Diag">
+<meta property="og:title" content="WiFi Analyzer Diag — مسح شبكات Wi-Fi وتشخيصها">
 <meta property="og:url" content="https://mboti.github.io/belksiri-scan/ar/">
+<meta property="og:description" content="مسح شبكات Wi-Fi واختبارات الشبكة ومسح التغطية على مخططاتك، على iPhone وiPad وMac وWindows.">
+<meta property="og:image" content="https://mboti.github.io/belksiri-scan/assets/icon-512.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="WiFi Analyzer Diag">
+<meta name="twitter:card" content="summary">
 <link rel="canonical" href="https://mboti.github.io/belksiri-scan/ar/">
 <link rel="alternate" hreflang="en" href="https://mboti.github.io/belksiri-scan/">
 <link rel="alternate" hreflang="fr" href="https://mboti.github.io/belksiri-scan/fr/">
@@ -32,9 +38,9 @@
   <div class="wrap">
     <a class="brand" href="./">
       <img src="../assets/icon.png" alt="" width="26" height="26">
-      <span>Belksiri <span class="accent">Scan</span></span>
+      <span>WiFi Analyzer <span class="accent">Diag</span></span>
     </a>
-    <nav aria-label="Belksiri Scan">
+    <nav aria-label="WiFi Analyzer Diag">
       <ul>
         <li><a href="#features">الميزات</a></li>
         <li><a href="#platforms">المنصات</a></li>
@@ -67,11 +73,12 @@
 <section class="hero">
   <div class="wrap">
     <img class="mark" src="../assets/icon.png" alt="" width="88" height="88">
-    <h1>Belksiri Scan</h1>
+    <h1>WiFi Analyzer Diag</h1>
     <p class="tagline">قِس. ارسم الخرائط. شخّص.</p>
-    <p class="lead">مسح شبكات Wi-Fi، واختبارات الشبكة، ومسح التغطية على مخططاتك، على iPhone وiPad وMac.</p>
+    <p class="formerly">سابقًا: Belksiri Scan.</p>
+    <p class="lead">مسح شبكات Wi-Fi، واختبارات الشبكة، ومسح التغطية على مخططاتك، على iPhone وiPad وMac وWindows.</p>
     <p class="actions">
-      <a class="button primary" href="#features">اكتشف Belksiri Scan</a>
+      <a class="button primary" href="#features">اكتشف WiFi Analyzer Diag</a>
       <a class="button" href="privacy.html">سياسة الخصوصية</a>
     </p>
   </div>
@@ -99,7 +106,7 @@
         <p>اضبطها عبر Bluetooth واستخدمها مصدرًا للقياس. وعلى Mac، ثبّت برنامجها الثابت عبر USB.</p>
       </li>
       <li class="card">
-        <h3>Belksiri Scan Pro</h3>
+        <h3>WiFi Analyzer Diag Pro</h3>
         <p>عدة طوابق وعدة نقاط وصول لكل مشروع، وتحليل المسح، وتصدير تقرير المشروع، وتشخيص الحالة. شراء لمرة واحدة، بلا اشتراك.</p>
       </li>
       <li class="card">
@@ -114,15 +121,23 @@
   <div class="wrap">
     <p class="eyebrow">المنصّات</p>
     <h2>متوفر على</h2>
-    <p class="prose">شراء واحد لـ Pro يشمل iPhone وiPad وMac باستخدام حساب Apple نفسه. على iPhone وiPad، لا يسمح iOS للتطبيقات بمسح شبكات Wi-Fi: لذا يعتمد المسح وقياسات مسح التغطية على لوحة ESP32-C5. أما على Mac، فيمكن لجهاز Mac نفسه إجراء المسح.</p>
-    <ul class="grid narrow">
-      <li class="card">
+    <p class="prose">iPhone وiPad وMac: شراء واحد لـ Pro يفعّله على الأجهزة الثلاثة باستخدام حساب Apple نفسه.</p>
+    <p class="prose">Windows: التطبيق وPro متوفران في Microsoft Store. يرتبط Pro المشترى على Windows بحساب Microsoft الخاص بك، وهو منفصل عن أي شراء يتم في App Store.</p>
+    <ul class="grid narrow platforms">
+      <li class="card platform">
         <h3>iPhone وiPad</h3>
-        <span class="pill">قريبًا</span>
+        <p>يعتمد المسح وقياسات مسح التغطية على لوحة ESP32-C5: لا يسمح iOS للتطبيقات بمسح شبكات Wi-Fi.</p>
+        <a class="button" href="https://apps.apple.com/app/id6827581112">App Store</a>
       </li>
-      <li class="card">
+      <li class="card platform">
         <h3>Mac</h3>
-        <span class="pill">قريبًا</span>
+        <p>يمسح جهاز Mac شبكات Wi-Fi بنفسه؛ ولوحة ESP32-C5 اختيارية.</p>
+        <a class="button" href="https://apps.apple.com/app/id6827581112">App Store</a>
+      </li>
+      <li class="card platform">
+        <h3>Windows</h3>
+        <p>يمسح الكمبيوتر شبكات Wi-Fi بمحوّله الخاص؛ وقد يطلب Windows الموافقة على الموقع.</p>
+        <a class="button" href="https://apps.microsoft.com/detail/9NGSD28GPH2H">Microsoft Store</a>
       </li>
     </ul>
   </div>
@@ -131,7 +146,7 @@
 <section class="pad" id="tutorials">
   <div class="wrap">
     <p class="eyebrow">الدروس</p>
-    <h2>تعرّف على Belksiri Scan بالفيديو</h2>
+    <h2>تعرّف على WiFi Analyzer Diag بالفيديو</h2>
     <p class="prose">خمسة مقاطع فيديو باللغة الإنجليزية، مصوّرة على Mac: البدء، ومسح شبكات Wi-Fi، والتشخيص وPing، ومسح التغطية، والإعدادات. يفتح الرابط YouTube الذي يطبّق قواعد الخصوصية الخاصة به.</p>
     <p class="actions">
       <a class="button youtube" href="https://www.youtube.com/channel/UCVVVo-XpFFkp37kbJ428Nkg/playlists"><svg class="yt" viewBox="0 3.6 24 16.8" width="29" height="20" aria-hidden="true" focusable="false"><path fill="#FF0000" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1 31.6 31.6 0 0 0 .5-5.8 31.6 31.6 0 0 0-.5-5.8z"/><path fill="#FFFFFF" d="M9.6 15.6V8.4l6.2 3.6z"/></svg><span>شاهد على YouTube</span></a>
@@ -145,7 +160,7 @@
   <div class="wrap">
     <a class="brand" href="./">
       <img src="../assets/icon.png" alt="" width="26" height="26">
-      <span>Belksiri <span class="accent">Scan</span></span>
+      <span>WiFi Analyzer <span class="accent">Diag</span></span>
     </a>
     <nav aria-label="الرئيسية">
       <ul>
